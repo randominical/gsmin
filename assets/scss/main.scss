@@ -1,1 +1,63 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-display: swap;
+    src: url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-display: swap;
+    src: url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-display: swap;
+    src: url('../fonts/OpenSans/OpenSans-SemiBold.woff') format('woff'), url('../fonts/OpenSans/OpenSans-SemiBold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 @import url('../css/normalize.css');
+
+html,
+body {
+	height: 100%;
+	font-family: "Open Sans", sans-serif;
+	color: rgba(34, 34, 34, 1);
+	font-size: 16px;
+	line-height: 24px;
+}
+//==============================
+.wrapper {
+	display: grid;
+	min-height: 100%;
+	grid-template: minmax(162px, auto) 1fr minmax(335px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+//==============================
+.header {
+	grid-area: header;
+	align-items: center;
+	display: grid;
+	grid-template: 3fr / 1fr;
+	&__top {
+		background-color: rgba(243, 243, 243, 1);
+	}
+}
+//==============================
+.main {
+    grid-area: main;
+}
+//==============================
+.footer {
+	grid-area: footer;
+	align-items: center;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
