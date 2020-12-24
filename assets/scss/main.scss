@@ -25,9 +25,9 @@
 html,
 body {
 	height: 100%;
+	background: rgba(255, 255, 255, 1);
 	font-family: "Open Sans", sans-serif;
 	color: rgba(34, 34, 34, 1);
-	font-size: 16px;
 	line-height: 24px;
 }
 //==============================
@@ -45,9 +45,51 @@ body {
 	grid-area: header;
 	align-items: center;
 	display: grid;
-	grid-template: 3fr / 1fr;
+	grid-template: minmax(37px, auto) minmax(85px, auto) minmax(40px, auto) /  1fr;
 	&__top {
 		background-color: rgba(243, 243, 243, 1);
+		align-items: center;
+		display: grid;
+		grid-template: 1fr / 1fr minmax(auto, 1173px) 1fr;
+	}
+	&__main {
+		display: grid;
+		grid-template: 1fr / 1fr 170px minmax(auto, 826px) minmax(auto, 177px) 1fr;
+	}
+	&__bottom {
+		background-color:rgba(252, 25, 25, 1);
+		display: grid;
+		grid-template: 1fr / 1fr minmax(auto, 1173px) 1fr;
+	}
+}
+.top-header {
+	&__menu {
+		grid-column: 2 / 3;
+	}
+	&__list {
+		display: grid;
+		grid-template: 1fr / 100px 100px 100px 100px 100px 100px 100px 100px;
+	}
+}
+.main-header {
+	&__logo {
+		grid-column: 2 / 3;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__middle {
+		grid-column: 3 / 4;
+	}
+	&__private {
+		grid-column: 4 / 5;
+	}
+}
+.bottom-header {
+	&__menu {
+		grid-column: 2 / 3;
 	}
 }
 //==============================
