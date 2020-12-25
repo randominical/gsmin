@@ -196,7 +196,7 @@ a, button {
 .basket__number {
   position: absolute;
   top: -5px;
-  right: 25px;
+  right: 22px;
   width: 17px;
   height: 17px;
   background: #fc1919;
@@ -206,7 +206,7 @@ a, button {
   text-align: center; }
   .basket__number span {
     position: relative;
-    top: -3px; }
+    top: 3px; }
 
 .bottom-header__menu {
   grid-column: 2 / 3; }
