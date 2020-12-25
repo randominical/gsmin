@@ -270,6 +270,15 @@ a,button {
 			i {
 				transform: rotate(-180deg);
 			}
+			&::before {
+				content: '';
+				position: absolute;
+				left: 7px;
+				bottom: 9px;
+				width: calc(100% - 25px);
+				height: 1px;
+				background: rgba(243, 243, 243, 1);
+			}
 		}
 	}
 }

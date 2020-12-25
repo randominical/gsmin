@@ -258,6 +258,14 @@ a, button {
     .bottom-header__link:hover i {
       -webkit-transform: rotate(-180deg);
               transform: rotate(-180deg); }
+    .bottom-header__link:hover::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      bottom: 9px;
+      width: calc(100% - 25px);
+      height: 1px;
+      background: #f3f3f3; }
 
 .main {
   grid-area: main; }
