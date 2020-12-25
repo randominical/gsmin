@@ -239,22 +239,25 @@ a, button {
           align-items: center;
   justify-items: start;
   color: #f3f3f3;
-  padding-right: 16px;
+  padding-right: 18px;
   padding-left: 7px;
   position: relative; }
-  .bottom-header__link::after {
-    content: '';
+  .bottom-header__link i {
     position: absolute;
-    top: calc(50% - 2.8px);
+    top: calc(50% - 6px);
     right: 3px;
-    width: 5.5px;
-    height: 5.5px;
-    border-right: 2px solid #f3f3f3;
-    border-bottom: 2px solid #f3f3f3;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
+    color: #f3f3f3;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease; }
   .bottom-header__link:hover {
     background: #d31414; }
+    .bottom-header__link:hover i {
+      -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
 
 .main {
   grid-area: main; }

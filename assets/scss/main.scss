@@ -253,22 +253,23 @@ a,button {
 		align-items: center;
 		justify-items: start;
 		color: rgba(243, 243, 243, 1);
-		padding-right: 16px;
+		padding-right: 18px;
 		padding-left: 7px;
 		position: relative;
-		&::after {
-			content: '';
+		i {
 			position: absolute;
-			top: calc(50% - 2.8px);
+			top: calc(50% - 6px);
 			right: 3px;
-			width: 5.5px;
-			height: 5.5px;
-			border-right: 2px solid rgba(243, 243, 243, 1);
-			border-bottom: 2px solid rgba(243, 243, 243, 1);
-			transform: rotate(45deg);
+			color: rgba(243, 243, 243, 1);
+			font-size: 14px;
+			font-weight: bold;
+			transition: transform .3s ease;
 		}
 		&:hover {
-			background: rgba(211, 20, 20, 1);;
+			background: rgba(211, 20, 20, 1);
+			i {
+				transform: rotate(-180deg);
+			}
 		}
 	}
 }
