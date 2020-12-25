@@ -25,6 +25,9 @@ body {
   color: #222222;
   line-height: 24px; }
 
+a, button {
+  cursor: pointer; }
+
 .wrapper {
   display: grid;
   min-height: 100%;
@@ -40,14 +43,18 @@ body {
   grid-template: minmax(37px, auto) minmax(85px, auto) minmax(40px, auto)/1fr; }
   .header__top {
     background-color: #f3f3f3;
+    display: grid;
+    grid-template: 1fr / 1fr 1173px 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .header__main {
+    display: grid;
+    grid-template: 1fr/1fr 170px minmax(auto, 375px) minmax(auto, 450px) minmax(auto, 178px) 1fr;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    display: grid;
-    grid-template: 1fr/1fr minmax(auto, 1173px) 1fr; }
-  .header__main {
-    display: grid;
-    grid-template: 1fr/1fr 170px minmax(auto, 826px) minmax(auto, 177px) 1fr; }
+    justify-items: stretch; }
   .header__bottom {
     background-color: #fc1919;
     display: grid;
@@ -57,7 +64,8 @@ body {
   grid-column: 2 / 3; }
 .top-header__list {
   display: grid;
-  grid-template: 1fr / 100px 100px 100px 100px 100px 100px 100px 100px; }
+  grid-template: 1fr/repeat(11, auto);
+  justify-items: stretch; }
 
 .main-header__logo {
   grid-column: 2 / 3;
@@ -65,13 +73,48 @@ body {
   .main-header__logo img {
     width: 100%;
     height: auto; }
-.main-header__middle {
-  grid-column: 3 / 4; }
-.main-header__private {
+.main-header__phones {
+  grid-column: 3 / 4;
+  justify-self: end;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr; }
+.main-header__search {
   grid-column: 4 / 5; }
+.main-header__private {
+  grid-column: 5 / 6;
+  justify-self: end;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  justify-items: stretch; }
+.main-header__cabinet {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  overflow: hidden; }
+  .main-header__cabinet img {
+    width: 25px;
+    height: auto; }
+.main-header__basket {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  overflow: hidden; }
+  .main-header__basket img {
+    width: 34px;
+    height: auto; }
 
 .bottom-header__menu {
   grid-column: 2 / 3; }
+.bottom-header__list {
+  display: grid;
+  grid-template: 1fr/repeat(7, auto);
+  justify-items: stretch; }
 
 .main {
   grid-area: main; }
