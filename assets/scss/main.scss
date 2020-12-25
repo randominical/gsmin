@@ -28,7 +28,6 @@ body {
 	background: rgba(255, 255, 255, 1);
 	font-family: "Open Sans", sans-serif;
 	color: rgba(34, 34, 34, 1);
-	line-height: 24px;
 }
 a,button {
 	cursor: pointer;
@@ -59,7 +58,7 @@ a,button {
 	}
 	&__main {
 		display: grid;
-		grid-template: 1fr / 1fr 170px minmax(auto, 375px) minmax(auto, 450px) minmax(auto, 178px) 1fr;
+		grid-template: 1fr / 1fr 170px minmax(auto, 360px) minmax(auto, 435px) minmax(auto, 163px) 1fr;
 		align-items: center;
 		justify-items: stretch;
 		column-gap: 15px;
@@ -313,6 +312,17 @@ a,button {
 			top: 0;
 			left: 0;
 			object-fit: cover;
+		}
+	}
+	&__lable {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+	}
+	&__arrow {
+		fill: rgba(34, 34, 34, 1);
+		&:hover {
+			fill: red;
 		}
 	}
 }
