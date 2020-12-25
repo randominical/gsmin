@@ -196,17 +196,13 @@ a, button {
 .basket__number {
   position: absolute;
   top: -5px;
-  right: 22px;
-  width: 17px;
-  height: 17px;
+  left: 42px;
+  padding: 3.8px 5.4px;
   background: #fc1919;
   border-radius: 50%;
   color: white;
   font-size: 10px;
   text-align: center; }
-  .basket__number span {
-    position: relative;
-    top: 3px; }
 
 .bottom-header__menu {
   grid-column: 2 / 3; }
