@@ -9,7 +9,7 @@
     font-family: 'Open Sans';
     font-display: swap;
     src: url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-weight: 800;
     font-style: normal;
 }
 @font-face {
@@ -45,6 +45,7 @@ a,button {
 }
 //==============================
 .header {
+	font-weight: 600;
 	grid-area: header;
 	align-items: center;
 	display: grid;
@@ -76,6 +77,12 @@ a,button {
 		grid-template: 1fr / repeat(11, auto);
 		justify-items: stretch;
 	}
+	&__link {
+		color: rgba(107, 106, 106, 1);
+		&_red {
+			color: rgba(252, 25, 25, 1);
+		}
+	}
 }
 .main-header {
 	&__logo {
@@ -91,23 +98,52 @@ a,button {
 		justify-self: end;
 		display: grid;
 		grid-template: 1fr 1fr / 1fr;
+		row-gap: 8px;
+		padding: 0 18px 0 53px;
+		background: url('../img/header/icon_phone.png') left / 17px 28px no-repeat;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			background: rgba(224, 224, 224, 1);
+			top: 0;
+			left: 33px;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			background: rgba(224, 224, 224, 1);
+			top: 0;
+			right: 0;
+		}
 	}
 	&__search {
 		grid-column: 4 / 5;
 	}
 	&__private {
 		grid-column: 5 / 6;
-		justify-self: end;
 		display: grid;
-		grid-template: 1fr / 1fr 1fr;
+		grid-template: 1fr / repeat(2, auto);
 		justify-items: stretch;
+		column-gap: 20px;
+	}
+	&__tel {
+		font-size: 21px;
+		font-weight: 800;
+		color: rgba(85, 85, 85, 1);
+		span {
+			color: rgba(252, 25, 25, 1);
+		}
 	}
 	&__cabinet {
 		display: grid;
 		grid-template: 1fr 1fr / 1fr;
 		align-items: center;
 		justify-items: center;
-		overflow: hidden;
 		img {
 			width: 25px;
 			height: auto;
@@ -118,10 +154,28 @@ a,button {
 		grid-template: 1fr 1fr / 1fr;
 		align-items: center;
 		justify-items: center;
-		overflow: hidden;
+		position: relative;
 		img {
 			width: 34px;
 			height: auto;
+		}
+	}
+}
+.basket {
+	&__number {
+		position: absolute;
+		top: -5px;
+		right: 25px;
+		width: 17px;
+		height: 17px;
+		background: rgba(252, 25, 25, 1);
+		border-radius: 50%;
+		color: rgba(255, 255, 255, 1);
+		font-size: 10px;
+		text-align: center;
+		span {
+			position: relative;
+			top: -3px;
 		}
 	}
 }
@@ -133,6 +187,22 @@ a,button {
 		display: grid;
 		grid-template: 1fr / repeat(7, auto);
 		justify-items: stretch;
+	}
+	&__link {
+		color: rgba(243, 243, 243, 1);
+		padding-right: 14px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 2.8px);
+			right: 0;
+			width: 5.5px;
+			height: 5.5px;
+			border-right: 2px solid rgba(243, 243, 243, 1);
+			border-bottom: 2px solid rgba(243, 243, 243, 1);
+			transform: rotate(45deg);
+		}
 	}
 }
 //==============================
