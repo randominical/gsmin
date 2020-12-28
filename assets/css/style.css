@@ -330,7 +330,7 @@ a, button, a *, button * {
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     -webkit-column-gap: 15px;
             column-gap: 15px;
-    row-gap: 12px; }
+    row-gap: 15px; }
   .new__item {
     background: white;
     border: 1px solid #e3e3e3;
@@ -422,9 +422,9 @@ a, button, a *, button * {
       -ms-flex-pack: right;
           justify-content: right;
   font-size: 12px;
-  color: white;
-  padding: 7px 12px 7px 20px; }
-  .tag_n {
+  color: white; }
+  .tag__n {
+    padding: 7px 12px 7px 20px;
     background: url(../img/main/tag_n.png) left/cover no-repeat; }
 
 .footer {
