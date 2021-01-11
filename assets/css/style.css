@@ -559,6 +559,16 @@ a, button, a *, button * {
 .main-footer__payments {
   grid-column: 4 / 5; }
 
+.shop__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.copyright {
+  display: grid;
+  grid-template: 1fr / 1fr 1173px 1fr; }
+  .copyright__text {
+    grid-column: 2 / 3; }
+
 .tag {
   position: absolute;
   top: 16px;

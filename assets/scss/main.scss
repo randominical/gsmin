@@ -632,6 +632,19 @@ a,button, a *, button * {
 		grid-column: 4 / 5;
 	}
 }
+.shop {
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+.copyright {
+	display: grid;
+	grid-template: 1fr / 1fr 1173px 1fr;
+	&__text {
+		grid-column: 2 / 3;
+	}
+}
 //==============================
 .tag {
 	position: absolute;
