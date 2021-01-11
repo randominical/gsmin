@@ -601,8 +601,9 @@ a,button, a *, button * {
 	grid-template: minmax(55px, auto) minmax(285px, auto) minmax(45px, auto) / 1fr;
 	&__form {
 		display: grid;
-		grid-template: 1fr / 1fr minmax(auto, 850px) 263px 1fr;
-		column-gap: 25px;
+		grid-template: 1fr / 1fr minmax(auto, 890px) 263px 1fr;
+		column-gap: 20px;
+		justify-content: stretch;
 	}
 	&__main {
 		display: grid;
@@ -614,11 +615,36 @@ a,button, a *, button * {
 	}
 }
 .form {
+	background: rgba(255, 87, 88, 1);
+	padding: 5px 0 5px 0;
+	align-items: center;
 	&__lable {
 		grid-column: 2 / 3;
+		color: rgba(255, 255, 255, 1);
+		font-size: 16px;
+		line-height: 20px;
+	}
+	&__item {
+		grid-column: 3 / 4;
+		height: 43px;
+		position: relative;
 	}
 	&__input {
-		grid-column: 3 / 4;
+		height: 100%;
+		width: 100%;
+		border: 3px solid  rgba(255, 255, 255, 1);
+		padding: 15px 45px 15px 15px;
+		&:focus {
+			box-shadow: inset 0px 0px 5px rgba(128, 128, 128, .5);
+		}
+	}
+	&__btn {
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		height: calc(100% - 6px);
+		width: 37px;
+		background: rgba(255, 0, 0, 1) url('../img/footer/arrow.png') center / 12px auto no-repeat;
 	}
 }
 .main-footer {

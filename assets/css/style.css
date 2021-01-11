@@ -538,19 +538,48 @@ a, button, a *, button * {
   grid-template: minmax(55px, auto) minmax(285px, auto) minmax(45px, auto)/1fr; }
   .footer__form {
     display: grid;
-    grid-template: 1fr/1fr minmax(auto, 850px) 263px 1fr;
-    -webkit-column-gap: 25px;
-            column-gap: 25px; }
+    grid-template: 1fr/1fr minmax(auto, 890px) 263px 1fr;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch; }
   .footer__main {
     display: grid;
     grid-template: 1fr/1fr minmax(auto, 548px) minmax(auto, 265px) minmax(auto, 260px) 1fr;
     -webkit-column-gap: 25px;
             column-gap: 25px; }
 
-.form__lable {
-  grid-column: 2 / 3; }
-.form__input {
-  grid-column: 3 / 4; }
+.form {
+  background: #ff5758;
+  padding: 5px 0 5px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .form__lable {
+    grid-column: 2 / 3;
+    color: white;
+    font-size: 16px;
+    line-height: 20px; }
+  .form__item {
+    grid-column: 3 / 4;
+    height: 43px;
+    position: relative; }
+  .form__input {
+    height: 100%;
+    width: 100%;
+    border: 3px solid white;
+    padding: 15px 45px 15px 15px; }
+    .form__input:focus {
+      -webkit-box-shadow: inset 0px 0px 5px rgba(128, 128, 128, 0.5);
+              box-shadow: inset 0px 0px 5px rgba(128, 128, 128, 0.5); }
+  .form__btn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: calc(100% - 6px);
+    width: 37px;
+    background: red url("../img/footer/arrow.png") center/12px auto no-repeat; }
 
 .main-footer__shop {
   grid-column: 2 / 3; }
