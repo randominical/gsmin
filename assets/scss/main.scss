@@ -523,6 +523,74 @@ a,button, a *, button * {
 	}
 }
 //==============================
+.review {
+	padding: 30px 0 70px 0;
+	background: rgba(255, 255, 255, 1);
+	display: grid;
+	grid-template: minmax(55px, auto) 1fr / 1fr 1173px 1fr;
+	&__title {
+		grid-column: 2 / 3;
+	}
+	&__body {
+		grid-column: 2 / 3;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(575px, 1fr));
+		grid-auto-rows: 1fr;
+		column-gap: 20px;
+		row-gap: 15px;
+	}
+	&__item {
+		display: grid;
+		grid-auto-flow: row;
+		grid-template: auto minmax(25px, auto) minmax(24px, auto) 1fr / 1fr;
+		&:hover {
+			.review__lable {
+				color: rgba(252, 25, 25, 1);
+			}
+		}
+	}
+	&__image {
+		position: relative;
+		padding: 0px 0px 40% 0px;
+		margin: 0px 0px 20px 0px;
+		img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+	&__mark {
+		color: rgba(255, 255, 255, 1);
+		padding: 5px 18px;
+		border-radius: 5px;
+		&_r {
+			background: rgba(39, 174, 96, 1);
+		}
+		&_d {
+			background: rgba(235, 87, 87, 1);
+		}
+		&_n {
+			background: rgba(45, 156, 219, 1);
+		}
+	}
+	&__lable {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 24px;
+		margin: 14px 0 15px 0;
+	}
+	&__description {
+		margin: 0;
+		font-size: 15px;
+		line-height: 24px;
+		color: rgba(79, 79, 79, 1);
+	}
+}
+
+//==============================
 .tag {
 	position: absolute;
 	top: 16px;
