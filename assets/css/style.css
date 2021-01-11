@@ -529,6 +529,36 @@ a, button, a *, button * {
     line-height: 24px;
     color: #4f4f4f; }
 
+.footer {
+  grid-area: footer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: grid;
+  grid-template: minmax(55px, auto) minmax(285px, auto) minmax(45px, auto)/1fr; }
+  .footer__form {
+    display: grid;
+    grid-template: 1fr/1fr minmax(auto, 850px) 263px 1fr;
+    -webkit-column-gap: 25px;
+            column-gap: 25px; }
+  .footer__main {
+    display: grid;
+    grid-template: 1fr/1fr minmax(auto, 548px) minmax(auto, 265px) minmax(auto, 260px) 1fr;
+    -webkit-column-gap: 25px;
+            column-gap: 25px; }
+
+.form__lable {
+  grid-column: 2 / 3; }
+.form__input {
+  grid-column: 3 / 4; }
+
+.main-footer__shop {
+  grid-column: 2 / 3; }
+.main-footer__contacts {
+  grid-column: 3 / 4; }
+.main-footer__payments {
+  grid-column: 4 / 5; }
+
 .tag {
   position: absolute;
   top: 16px;
@@ -580,13 +610,5 @@ a, button, a *, button * {
     color: #00d459; }
   .stock__right {
     color: white; }
-
-.footer {
-  grid-area: footer;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: grid;
-  grid-template: 2fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr; }
 
 /*# sourceMappingURL=style.css.map */
