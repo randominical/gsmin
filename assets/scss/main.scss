@@ -598,7 +598,7 @@ a,button, a *, button * {
 	grid-area: footer;
 	align-items: center;
 	display: grid;
-	grid-template: minmax(55px, auto) minmax(285px, auto) minmax(45px, auto) / 1fr;
+	grid-template: minmax(55px, auto) minmax(285px, auto) minmax(50px, auto) / 1fr;
 	&__form {
 		display: grid;
 		grid-template: 1fr / 1fr minmax(auto, 890px) 263px 1fr;
@@ -607,11 +607,15 @@ a,button, a *, button * {
 	}
 	&__main {
 		display: grid;
-		grid-template: 1fr / 1fr minmax(auto, 548px) minmax(auto, 265px) minmax(auto, 260px) 1fr;
+		grid-template: 1fr / 1fr minmax(auto, 573px) minmax(auto, 265px) minmax(auto, 285px) 1fr;
 		column-gap: 25px;
 	}
 	&__copyright {
-
+		height: 100%;
+		display: grid;
+		grid-template: 1fr / 1fr 1173px 1fr;
+		background: rgba(47, 47, 47, 1);
+		align-items: center;
 	}
 }
 .form {
@@ -658,10 +662,7 @@ a,button, a *, button * {
 		grid-column: 4 / 5;
 	}
 }
-.shop {
-	&__lable {
-
-	}	
+.shop {	
 	&__list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -692,6 +693,7 @@ a,button, a *, button * {
 	&__image {
 		margin: 0 0 30px 0;
 		max-width: 100%;
+		overflow: hidden;
 		img {
 			max-width: 100%;
 			height: auto;
@@ -720,10 +722,10 @@ a,button, a *, button * {
 	}
 } 
 .copyright {
-	display: grid;
-	grid-template: 1fr / 1fr 1173px 1fr;
 	&__text {
 		grid-column: 2 / 3;
+		color: rgba(107, 107, 107, 1);
+		font-size: 12px;
 	}
 }
 .lable-footer {
