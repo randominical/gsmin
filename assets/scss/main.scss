@@ -735,6 +735,7 @@ a,button, a *, button * {
 }
 //==============================
 .tag {
+	display: inline-block;
 	position: absolute;
 	top: 16px;
 	font-weight: 600;
@@ -760,7 +761,6 @@ a,button, a *, button * {
 		margin: 0 0 7px 0;
 	}
 	&__d {
-		display: inline-block;
 		padding: 5px 12px 5px 20px;
 		background: url(../img/main/tag_d.png) left / cover no-repeat;
 	}
