@@ -269,6 +269,25 @@ a, button, a *, button * {
 .main {
   grid-area: main; }
 
+.carousel {
+  width: 100%;
+  height: 456px;
+  display: grid;
+  grid-template: 1fr / 1fr 1173px 1fr; }
+  .carousel__wrapper {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template: 1fr/repeat(4, 1fr);
+    overflow: hidden; }
+  .carousel__item:first-child {
+    background: url("../img/slider/slider_1.jpg") right/contain no-repeat; }
+  .carousel__item:nth-child(2) {
+    background: url("../img/slider/slider_2.jpg") right/contain no-repeat; }
+  .carousel__item:nth-child(3) {
+    background: url("../img/slider/slider_3.jpg") right/contain no-repeat; }
+  .carousel__item:nth-child(4) {
+    background: url("../img/slider/slider_4.jpg") right/contain no-repeat; }
+
 .basic {
   padding: 30px 0 20px 0;
   display: grid;
