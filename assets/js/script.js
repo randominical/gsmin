@@ -1,4 +1,4 @@
-let mySwiper = new Swiper('.carousel', {
+/*let mySwiper = new Swiper('.carousel', {
     wrapperClass: "carousel__wrapper",
     slideClass: "carousel__item",
 
@@ -13,4 +13,20 @@ let mySwiper = new Swiper('.carousel', {
       prevEl: '.carousel__button-prev',
     },
   
+  })*/
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 1,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   })
