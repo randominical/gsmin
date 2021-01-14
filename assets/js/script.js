@@ -1,4 +1,4 @@
-let mySwiper = new Swiper ('.carousel__container', {
+let mainSwiper = new Swiper ('.carousel__container', {
   direction: 'horizontal',
   loop: false,
   pagination: {
@@ -6,6 +6,15 @@ let mySwiper = new Swiper ('.carousel__container', {
     type: 'bullets',
     clickable: true,
   },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+let recommendSwiper = new Swiper ('.recommend__container', {
+  direction: 'horizontal',
+  loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
