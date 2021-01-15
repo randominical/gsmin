@@ -7,8 +7,8 @@ let mainSwiper = new Swiper ('.carousel__container', {
     clickable: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.carousel__btn_n',
+    prevEl: '.carousel__btn_p',
   },
 });
 
@@ -18,8 +18,8 @@ let recommendSwiper = new Swiper ('.recommend__container', {
   spaceBetween: 30,
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.recommend__btn_n',
+    prevEl: '.recommend__btn_p',
   },
 });
 
@@ -29,7 +29,7 @@ let discountSwiper = new Swiper ('.discount__container', {
   spaceBetween: 30,
   loop: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.discount__btn_n',
+    prevEl: '.discount__btn_p',
   },
 })
