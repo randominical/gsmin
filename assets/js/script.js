@@ -14,6 +14,8 @@ let mainSwiper = new Swiper ('.carousel__container', {
 
 let recommendSwiper = new Swiper ('.recommend__container', {
   direction: 'horizontal',
+  slidesPerView: 4,
+  spaceBetween: 30,
   loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
