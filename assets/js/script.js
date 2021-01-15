@@ -21,4 +21,15 @@ let recommendSwiper = new Swiper ('.recommend__container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+});
+
+let discountSwiper = new Swiper ('.discount__container', {
+  direction: 'horizontal',
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 })

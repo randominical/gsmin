@@ -575,6 +575,81 @@ a, button, a *, button * {
     .hits__btn:hover {
       background: #d31414; }
 
+.discount {
+  padding: 10px 0 54px 0;
+  background: #f6f6f6;
+  display: grid;
+  grid-template: minmax(55px, auto) auto/1fr 1306px 1fr; }
+  .discount__title {
+    grid-column: 2 / 3;
+    margin-left: 66.5px;
+    margin-right: 66.5px; }
+  .discount__container {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-auto-rows: 1fr;
+    overflow: hidden;
+    position: relative; }
+  .discount__item {
+    background: white;
+    border: 1px solid #e3e3e3;
+    padding: 6px 30px 30px 30px;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto)/1fr;
+    text-align: center;
+    position: relative; }
+
+.item-discount__image {
+  position: relative;
+  padding: 0px 0px 90% 0px;
+  margin: 0px 0px 20px 0px; }
+  .item-discount__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: contain;
+       object-fit: contain; }
+.item-discount__text {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: dimgray;
+  margin: 0 0 13px 0; }
+.item-discount__price {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 33px;
+  color: #292929;
+  margin: 0 0 19px 0; }
+  .item-discount__price span {
+    font-size: 26px;
+    font-weight: normal; }
+    .item-discount__price span.old {
+      font-style: italic;
+      font-size: 18px;
+      line-height: 28px;
+      -webkit-text-decoration-line: line-through;
+              text-decoration-line: line-through;
+      color: #bdbdbd; }
+.item-discount__btn {
+  width: 90%;
+  height: 43px;
+  justify-self: center;
+  background: #fc1919;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  padding: 10px; }
+  .item-discount__btn:hover {
+    background: #d31414; }
+
 .review {
   padding: 30px 0 70px 0;
   background: white;
