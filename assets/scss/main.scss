@@ -266,9 +266,10 @@ i {
 		grid-template: 43px / repeat(7, auto);
 		align-items: center;
 		justify-items: stretch;
-		column-gap: 1px;
+		column-gap: 2px;
 		margin: 0;
 		padding: 0;
+		position: relative;
 		li {
 			height: 100%;
 			display: grid;
@@ -283,9 +284,10 @@ i {
 		align-items: center;
 		justify-items: start;
 		color: rgba(243, 243, 243, 1);
-		padding-right: 18px;
 		padding-left: 7px;
+		cursor: pointer;
 		position: relative;
+		//проблема с позиционированием подменю из-за relative. Вариант исправления: переделать оформление li, чтобы relative не затрагивало подменю
 		i {
 			position: absolute;
 			top: calc(50% - 6px);
@@ -310,9 +312,10 @@ i {
 				background: rgba(243, 243, 243, 1);
 			}
 			.sublist {
+				width: 1000px;	
 				display: grid;
 				z-index: 2;
-				grid-template: 1fr / 1fr 1fr;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 				column-gap: 50px;
 			}
 		}
@@ -336,17 +339,18 @@ i {
 	font-weight: normal;
 	line-height: 130%;
 	p {
-		font-size: 18px;
+		font-size: 16px;
 		color:rgba(102, 204, 255, 1);
 		margin: 0 0 10px 0;
 	}
 	a {
-		font-size: 14px;
+		font-size: 12px;
 		color: rgba(105, 105, 105, 1);
 		margin: 0 0 10px 0;
 		white-space: nowrap;
 		&:hover {
 			color: rgba(102, 204, 255, 1);
+			text-decoration: underline;
 		}
 	}
 	&__li {

@@ -248,10 +248,11 @@ i {
       -ms-flex-align: center;
           align-items: center;
   justify-items: stretch;
-  -webkit-column-gap: 1px;
-          column-gap: 1px;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  position: relative; }
   .bottom-header__list li {
     height: 100%;
     display: grid;
@@ -268,8 +269,8 @@ i {
           align-items: center;
   justify-items: start;
   color: #f3f3f3;
-  padding-right: 18px;
   padding-left: 7px;
+  cursor: pointer;
   position: relative; }
   .bottom-header__li i {
     position: absolute;
@@ -296,9 +297,10 @@ i {
       height: 1px;
       background: #f3f3f3; }
     .bottom-header__li:hover .sublist {
+      width: 1000px;
       display: grid;
       z-index: 2;
-      grid-template: 1fr / 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       -webkit-column-gap: 50px;
               column-gap: 50px; }
 .bottom-header__sublist {
@@ -317,16 +319,17 @@ i {
   font-weight: normal;
   line-height: 130%; }
   .sublist p {
-    font-size: 18px;
+    font-size: 16px;
     color: #66ccff;
     margin: 0 0 10px 0; }
   .sublist a {
-    font-size: 14px;
+    font-size: 12px;
     color: dimgray;
     margin: 0 0 10px 0;
     white-space: nowrap; }
     .sublist a:hover {
-      color: #66ccff; }
+      color: #66ccff;
+      text-decoration: underline; }
   .sublist__li {
     margin: 0 0 20px 0; }
 
