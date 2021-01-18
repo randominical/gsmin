@@ -279,6 +279,7 @@ i {
 	&__li {
 		height: 100%;
 		display: grid;
+		grid-template: 1fr / auto;
 		align-items: center;
 		justify-items: start;
 		color: rgba(243, 243, 243, 1);
