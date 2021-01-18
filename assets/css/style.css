@@ -259,7 +259,7 @@ i {
         -ms-flex-align: center;
             align-items: center;
     justify-items: start; }
-.bottom-header__link {
+.bottom-header__li {
   height: 100%;
   display: grid;
   -webkit-box-align: center;
@@ -270,7 +270,7 @@ i {
   padding-right: 18px;
   padding-left: 7px;
   position: relative; }
-  .bottom-header__link i {
+  .bottom-header__li i {
     position: absolute;
     top: calc(50% - 6px);
     right: 3px;
@@ -281,12 +281,12 @@ i {
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease;
     transition: transform .3s ease, -webkit-transform .3s ease; }
-  .bottom-header__link:hover {
+  .bottom-header__li:hover {
     background: #d31414; }
-    .bottom-header__link:hover i {
+    .bottom-header__li:hover i {
       -webkit-transform: rotate(-180deg);
               transform: rotate(-180deg); }
-    .bottom-header__link:hover::before {
+    .bottom-header__li:hover::before {
       content: '';
       position: absolute;
       left: 7px;
