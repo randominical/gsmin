@@ -44,7 +44,6 @@ a, button, a *, button * {
   margin: 0 0 35px 0; }
 
 i {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
@@ -52,7 +51,6 @@ i {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -305,17 +303,14 @@ i {
   grid-template: 1fr / 1fr;
   position: relative; }
   .carousel__container {
-    height: 456px;
-    width: 100%; }
-  .carousel__item {
     width: 100%;
-    height: 100%; }
-    .carousel__item:first-child {
-      background: url("../img/slider/slider_1.jpg") center/contain no-repeat; }
-    .carousel__item:nth-child(2) {
-      background: url("../img/slider/slider_2.jpg") center/contain no-repeat; }
-    .carousel__item:nth-child(3) {
-      background: url("../img/slider/slider_3.jpg") center/contain no-repeat; }
+    height: 456px; }
+  .carousel__item_1, .carousel__item_4 {
+    background: url(../img/slider/slider_1.jpg) center/contain no-repeat; }
+  .carousel__item_2, .carousel__item_5 {
+    background: url(../img/slider/slider_2.jpg) center/contain no-repeat; }
+  .carousel__item_3, .carousel__item_6 {
+    background: url(../img/slider/slider_3.jpg) center/contain no-repeat; }
   .carousel__pagination {
     position: absolute;
     left: 0;

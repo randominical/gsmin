@@ -1,6 +1,12 @@
 let mainSwiper = new Swiper ('.carousel__container', {
   direction: 'horizontal',
-  loop: false,
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 1300,
+    disableOnInteraction: false
+  },
+  speed: 1000,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
