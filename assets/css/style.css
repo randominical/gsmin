@@ -261,6 +261,7 @@ i {
             align-items: center;
     justify-items: start; }
 .bottom-header__li {
+  background: url(../img/header/angle_down.png) right 3px top 50%/10px auto no-repeat;
   height: 100%;
   display: grid;
   grid-template: 1fr / auto;
@@ -270,32 +271,11 @@ i {
   justify-items: start;
   color: #f3f3f3;
   padding-left: 7px;
-  cursor: pointer;
-  position: relative; }
-  .bottom-header__li i {
-    position: absolute;
-    top: calc(50% - 6px);
-    right: 3px;
-    color: #f3f3f3;
-    font-size: 14px;
-    font-weight: bold;
-    -webkit-transition: -webkit-transform .3s ease;
-    transition: -webkit-transform .3s ease;
-    transition: transform .3s ease;
-    transition: transform .3s ease, -webkit-transform .3s ease; }
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+  cursor: pointer; }
   .bottom-header__li:hover {
-    background: #d31414; }
-    .bottom-header__li:hover i {
-      -webkit-transform: rotate(-180deg);
-              transform: rotate(-180deg); }
-    .bottom-header__li:hover::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      bottom: 9px;
-      width: calc(100% - 25px);
-      height: 1px;
-      background: #f3f3f3; }
+    background: url(../img/header/angle_up.png) right 3px top 50%/10px auto no-repeat, #d31414 url(../img/header/underline.png) left 4px bottom 8px/calc(100% - 25px) 1px no-repeat; }
     .bottom-header__li:hover .sublist {
       width: 1000px;
       display: grid;

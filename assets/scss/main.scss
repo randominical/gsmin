@@ -278,6 +278,7 @@ i {
 		}
 	}
 	&__li {
+		background: url(../img/header/angle_down.png) right 3px top 50% / 10px auto no-repeat;
 		height: 100%;
 		display: grid;
 		grid-template: 1fr / auto;
@@ -285,32 +286,11 @@ i {
 		justify-items: start;
 		color: rgba(243, 243, 243, 1);
 		padding-left: 7px;
+		transition: background .3s ease;
 		cursor: pointer;
-		position: relative;
 		//проблема с позиционированием подменю из-за relative. Вариант исправления: переделать оформление li, чтобы relative не затрагивало подменю
-		i {
-			position: absolute;
-			top: calc(50% - 6px);
-			right: 3px;
-			color: rgba(243, 243, 243, 1);
-			font-size: 14px;
-			font-weight: bold;
-			transition: transform .3s ease;
-		}
 		&:hover {
-			background: rgba(211, 20, 20, 1);
-			i {
-				transform: rotate(-180deg);
-			}
-			&::before {
-				content: '';
-				position: absolute;
-				left: 7px;
-				bottom: 9px;
-				width: calc(100% - 25px);
-				height: 1px;
-				background: rgba(243, 243, 243, 1);
-			}
+			background: url(../img/header/angle_up.png) right 3px top 50% / 10px auto no-repeat, rgba(211, 20, 20, 1) url(../img/header/underline.png) left 4px bottom 8px / calc(100% - 25px) 1px no-repeat;
 			.sublist {
 				width: 1000px;	
 				display: grid;
