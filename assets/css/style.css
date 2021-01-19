@@ -258,7 +258,7 @@ i {
             align-items: center;
     justify-items: start; }
 .bottom-header__li {
-  background: url(../img/header/angle_down.png) right 3px top 50%/10px auto no-repeat;
+  background: url(../img/header/angle_down.png) right 3px top 50%/8px auto no-repeat;
   height: 100%;
   display: grid;
   grid-template: 1fr / auto;
@@ -268,11 +268,12 @@ i {
   justify-items: start;
   color: #f3f3f3;
   padding-left: 7px;
+  padding-right: 15px;
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
   cursor: pointer; }
   .bottom-header__li:hover {
-    background: url(../img/header/angle_up.png) right 3px top 50%/10px auto no-repeat, #d31414 url(../img/header/underline.png) left 4px bottom 8px/calc(100% - 25px) 1px no-repeat; }
+    background: url(../img/header/angle_up.png) right 3px top 50%/8px auto no-repeat, #d31414 url(../img/header/underline.png) left 4px bottom 8px/calc(100% - 25px) 1px no-repeat; }
     .bottom-header__li:hover .sublist {
       width: 1000px;
       display: grid;
@@ -293,14 +294,15 @@ i {
 
 .sublist {
   padding: 15px 30px 50px 30px;
-  font-weight: normal;
   line-height: 130%; }
   .sublist p {
     font-size: 16px;
+    font-weight: bold;
     color: #66ccff;
     margin: 0 0 10px 0; }
   .sublist a {
     font-size: 12px;
+    font-weight: normal;
     color: dimgray;
     margin: 0 0 10px 0;
     white-space: nowrap; }
