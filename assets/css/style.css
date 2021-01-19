@@ -250,13 +250,6 @@ i {
   margin: 0;
   padding: 0;
   position: relative; }
-  .bottom-header__list li {
-    height: 100%;
-    display: grid;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    justify-items: start; }
 .bottom-header__li {
   background: url(../img/header/angle_down.png) right 3px top 50%/8px auto no-repeat;
   height: 100%;
@@ -275,12 +268,15 @@ i {
   .bottom-header__li:hover {
     background: url(../img/header/angle_up.png) right 3px top 50%/8px auto no-repeat, #d31414 url(../img/header/underline.png) left 4px bottom 8px/calc(100% - 25px) 1px no-repeat; }
     .bottom-header__li:hover .sublist {
-      width: 1000px;
+      width: 1034px;
       display: grid;
-      z-index: 2;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, 200px);
       -webkit-column-gap: 50px;
-              column-gap: 50px; }
+              column-gap: 50px;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: start;
+      z-index: 2; }
 .bottom-header__sublist {
   display: none;
   background: #f3f3f3;
@@ -293,20 +289,28 @@ i {
     right: 0; }
 
 .sublist {
-  padding: 15px 30px 50px 30px;
+  padding: 15px 30px 40px 30px;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
   line-height: 130%; }
   .sublist p {
     font-size: 16px;
     font-weight: bold;
     color: #66ccff;
     margin: 0 0 10px 0; }
-  .sublist a {
+  .sublist__link {
+    display: block;
     font-size: 12px;
     font-weight: normal;
     color: dimgray;
-    margin: 0 0 10px 0;
-    white-space: nowrap; }
-    .sublist a:hover {
+    margin: 0 0 10px 0; }
+    .sublist__link_b {
+      font-weight: bold;
+      padding: 10px 0 10px 0;
+      border-top: 1px solid #d1d1d1;
+      border-bottom: 1px solid #d1d1d1; }
+    .sublist__link:hover {
       color: #66ccff;
       text-decoration: underline; }
   .sublist__li {

@@ -267,12 +267,6 @@ i {
 		margin: 0;
 		padding: 0;
 		position: relative;
-		li {
-			height: 100%;
-			display: grid;
-			align-items: center;
-			justify-items: start;
-		}
 	}
 	&__li {
 		background: url(../img/header/angle_down.png) right 3px top 50% / 8px auto no-repeat;
@@ -286,15 +280,15 @@ i {
 		padding-right: 15px;
 		transition: background .3s ease;
 		cursor: pointer;
-		//проблема с позиционированием подменю из-за relative. Вариант исправления: переделать оформление li, чтобы relative не затрагивало подменю
 		&:hover {
 			background: url(../img/header/angle_up.png) right 3px top 50% / 8px auto no-repeat, rgba(211, 20, 20, 1) url(../img/header/underline.png) left 4px bottom 8px / calc(100% - 25px) 1px no-repeat;
 			.sublist {
-				width: 1000px;	
+				width: 1034px;	
 				display: grid;
-				z-index: 2;
-				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				grid-template-columns: repeat(auto-fill, 200px);
 				column-gap: 50px;
+				align-items: start;
+				z-index: 2;
 			}
 		}
 	}
@@ -313,7 +307,10 @@ i {
 	}
 }
 .sublist {
-	padding: 15px 30px 50px 30px;
+	padding: 15px 30px 40px 30px;
+	border: 1px solid  rgba(209, 209, 209, 1);
+	border-top: none;
+	border-radius: 0 0 5px 5px;
 	line-height: 130%;
 	p {
 		font-size: 16px;
@@ -321,12 +318,18 @@ i {
 		color:rgba(102, 204, 255, 1);
 		margin: 0 0 10px 0;
 	}
-	a {
+	&__link {
+		display: block;
 		font-size: 12px;
 		font-weight: normal;
 		color: rgba(105, 105, 105, 1);
 		margin: 0 0 10px 0;
-		white-space: nowrap;
+		&_b {
+			font-weight: bold;
+			padding: 10px 0 10px 0;
+			border-top: 1px solid  rgba(209, 209, 209, 1);
+			border-bottom: 1px solid  rgba(209, 209, 209, 1);
+		}
 		&:hover {
 			color: rgba(102, 204, 255, 1);
 			text-decoration: underline;
