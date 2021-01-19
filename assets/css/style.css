@@ -63,9 +63,6 @@ i {
 .icon-search1:before {
   content: "\e902"; }
 
-.icon-angle-down:before {
-  content: "\e903"; }
-
 .wrapper {
   display: grid;
   min-height: 100%;
