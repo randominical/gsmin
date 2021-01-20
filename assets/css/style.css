@@ -268,14 +268,15 @@ i {
   .bottom-header__li:hover {
     background: url(../img/header/angle_up.png) right 3px top 50%/8px auto no-repeat, #d31414 url(../img/header/underline.png) left 4px bottom 8px/calc(100% - 25px) 1px no-repeat; }
     .bottom-header__li:hover .sublist {
+      display: block;
       width: 1034px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 200px);
-      -webkit-column-gap: 50px;
-              column-gap: 50px;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: start;
+      max-height: 650px;
+      -webkit-column-width: 250px;
+              column-width: 250px;
+      -webkit-column-gap: 15px;
+              column-gap: 15px;
+      -webkit-column-fill: auto;
+              column-fill: auto;
       z-index: 2; }
 .bottom-header__sublist {
   display: none;
@@ -294,6 +295,10 @@ i {
   border-top: none;
   border-radius: 0 0 5px 5px;
   line-height: 130%; }
+  .sublist__li {
+    margin: 0 0 20px 0;
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid; }
   .sublist p {
     font-size: 16px;
     font-weight: bold;
@@ -313,8 +318,6 @@ i {
     .sublist__link:hover {
       color: #66ccff;
       text-decoration: underline; }
-  .sublist__li {
-    margin: 0 0 20px 0; }
 
 .main {
   grid-area: main; }
