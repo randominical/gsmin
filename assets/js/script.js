@@ -20,22 +20,44 @@ let mainSwiper = new Swiper ('.carousel__container', {
 
 let recommendSwiper = new Swiper ('.recommend__container', {
   direction: 'horizontal',
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
   navigation: {
     nextEl: '.recommend__btn_n',
     prevEl: '.recommend__btn_p',
   },
+  breakpoints: {
+    480: {
+        slidesPerView: 2,
+    },
+    992: {
+        slidesPerView: 3,
+    },
+    1165: {
+      slidesPerView: 4,
+    },
+},
 });
 
 let discountSwiper = new Swiper ('.discount__container', {
   direction: 'horizontal',
-  slidesPerView: 4,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
   navigation: {
     nextEl: '.discount__btn_n',
     prevEl: '.discount__btn_p',
+  },
+  breakpoints: {
+    480: {
+        slidesPerView: 2,
+    },
+    992: {
+        slidesPerView: 3,
+    },
+    1165: {
+      slidesPerView: 4,
+    },
   },
 })
