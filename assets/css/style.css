@@ -70,12 +70,13 @@ i {
   grid-template-areas: "header" "main" "footer"; }
 
 .header {
+  padding: 37px 0 0 0;
   grid-area: header;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: grid;
-  grid-template: minmax(37px, auto) minmax(85px, auto) minmax(40px, auto)/1fr; }
+  grid-template: minmax(85px, auto) minmax(40px, auto)/1fr; }
   .header__top {
     background-color: #f3f3f3;
     display: grid;
@@ -101,39 +102,47 @@ i {
     grid-template: 1fr/1fr minmax(auto, 1173px) 1fr;
     font-weight: 600; }
 
-.top-header__menu {
-  grid-column: 2 / 3; }
-.top-header__list {
-  display: grid;
-  grid-template: 37px/repeat(11, auto);
-  justify-items: stretch;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 5px;
-          column-gap: 5px;
-  margin: 0;
-  padding: 0; }
-  .top-header__list li {
-    height: 100%; }
-.top-header__link {
-  height: 100%;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 13px;
-  color: #6b6a6a; }
-  .top-header__link:hover {
-    color: black;
-    text-decoration: underline; }
-  .top-header__link_red {
-    color: #fc1919; }
-    .top-header__link_red:hover {
+.top-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 3; }
+  .top-header__menu {
+    grid-column: 2 / 3; }
+  .top-header__list {
+    display: grid;
+    grid-template: 37px/repeat(11, auto);
+    justify-items: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    margin: 0;
+    padding: 0; }
+    .top-header__list li {
+      height: 100%; }
+  .top-header__link {
+    height: 100%;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 13px;
+    color: #6b6a6a; }
+    .top-header__link:hover {
+      color: black;
       text-decoration: underline; }
+    .top-header__link_red {
+      color: #fc1919; }
+      .top-header__link_red:hover {
+        text-decoration: underline; }
 
 .main-header__logo {
   grid-column: 2 / 3;
