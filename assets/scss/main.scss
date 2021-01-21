@@ -38,7 +38,7 @@ body {
 }
 a,button, a *, button * {
 	cursor: pointer;
-	transition: color .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
+	transition: color .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
 }
 .title-section {
 	font-weight: bold;
@@ -462,6 +462,10 @@ i {
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
 		text-align: center;
 		position: relative;
+		transition: border .3s ease;
+		&:hover {
+			border: 1px solid rgba(255, 0, 0, 1);
+		}
 	}
 }
 .item-recommend {
@@ -515,6 +519,7 @@ i {
 		line-height: 24px;
 		color: rgba(255, 255, 255, 1);
 		padding: 10px;
+		z-index: 2;
 		&:hover {
 			background: rgba(211, 20, 20, 1);
 		}
@@ -546,7 +551,11 @@ i {
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
 		text-align: center;
 		position: relative;
+		transition: border .3s ease;
 		&:hover {
+			&:hover {
+				border: 1px solid rgba(255, 0, 0, 1);
+			}
 			.stock {
 				transition: opacity .2s ease, .2s, transform .4s ease 0s;
 				opacity: 1;
@@ -598,6 +607,7 @@ i {
 		line-height: 24px;
 		color: rgba(255, 255, 255, 1);
 		padding: 10px;
+		z-index: 2;
 		&:hover {
 			background: rgba(211, 20, 20, 1);
 		}
@@ -629,7 +639,9 @@ i {
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
 		text-align: center;
 		position: relative;
+		transition: border .3s ease;
 		&:hover {
+			border: 1px solid rgba(255, 0, 0, 1);
 			.stock {
 				transition: opacity .2s ease, .2s, transform .4s ease 0s;
 				opacity: 1;
@@ -688,6 +700,7 @@ i {
 		line-height: 24px;
 		color: rgba(255, 255, 255, 1);
 		padding: 10px;
+		z-index: 2;
 		&:hover {
 			background: rgba(211, 20, 20, 1);
 		}
@@ -718,6 +731,10 @@ i {
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
 		text-align: center;
 		position: relative;
+		transition: border .3s ease;
+		&:hover {
+			border: 1px solid rgba(255, 0, 0, 1);
+		}
 	}
 }
 .item-discount {
@@ -771,6 +788,7 @@ i {
 		line-height: 24px;
 		color: rgba(255, 255, 255, 1);
 		padding: 10px;
+		z-index: 2;
 		&:hover {
 			background: rgba(211, 20, 20, 1);
 		}

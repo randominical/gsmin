@@ -32,10 +32,10 @@ body {
 
 a, button, a *, button * {
   cursor: pointer;
-  -webkit-transition: color .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
-  transition: color .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
-  transition: color .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
-  transition: color .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease; }
+  -webkit-transition: color .3s ease, border .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
+  transition: color .3s ease, border .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
+  transition: color .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
+  transition: color .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease; }
 
 .title-section {
   font-weight: bold;
@@ -415,7 +415,11 @@ i {
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto)/1fr;
     text-align: center;
-    position: relative; }
+    position: relative;
+    -webkit-transition: border .3s ease;
+    transition: border .3s ease; }
+    .recommend__item:hover {
+      border: 1px solid red; }
 
 .item-recommend__image {
   position: relative;
@@ -462,7 +466,8 @@ i {
   font-size: 16px;
   line-height: 24px;
   color: white;
-  padding: 10px; }
+  padding: 10px;
+  z-index: 2; }
   .item-recommend__btn:hover {
     background: #d31414; }
 
@@ -489,7 +494,11 @@ i {
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto)/1fr;
     text-align: center;
-    position: relative; }
+    position: relative;
+    -webkit-transition: border .3s ease;
+    transition: border .3s ease; }
+    .new__item:hover:hover {
+      border: 1px solid red; }
     .new__item:hover .stock {
       -webkit-transition: opacity .2s ease, .2s, -webkit-transform .4s ease 0s;
       transition: opacity .2s ease, .2s, -webkit-transform .4s ease 0s;
@@ -537,7 +546,8 @@ i {
     font-size: 16px;
     line-height: 24px;
     color: white;
-    padding: 10px; }
+    padding: 10px;
+    z-index: 2; }
     .new__btn:hover {
       background: #d31414; }
 
@@ -564,16 +574,20 @@ i {
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto)/1fr;
     text-align: center;
-    position: relative; }
-    .hits__item:hover .stock {
-      -webkit-transition: opacity .2s ease, .2s, -webkit-transform .4s ease 0s;
-      transition: opacity .2s ease, .2s, -webkit-transform .4s ease 0s;
-      transition: opacity .2s ease, .2s, transform .4s ease 0s;
-      transition: opacity .2s ease, .2s, transform .4s ease 0s, -webkit-transform .4s ease 0s;
-      opacity: 1;
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-      z-index: 1; }
+    position: relative;
+    -webkit-transition: border .3s ease;
+    transition: border .3s ease; }
+    .hits__item:hover {
+      border: 1px solid red; }
+      .hits__item:hover .stock {
+        -webkit-transition: opacity .2s ease, .2s, -webkit-transform .4s ease 0s;
+        transition: opacity .2s ease, .2s, -webkit-transform .4s ease 0s;
+        transition: opacity .2s ease, .2s, transform .4s ease 0s;
+        transition: opacity .2s ease, .2s, transform .4s ease 0s, -webkit-transform .4s ease 0s;
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+        z-index: 1; }
   .hits__image {
     position: relative;
     padding: 0px 0px 90% 0px;
@@ -619,7 +633,8 @@ i {
     font-size: 16px;
     line-height: 24px;
     color: white;
-    padding: 10px; }
+    padding: 10px;
+    z-index: 2; }
     .hits__btn:hover {
       background: #d31414; }
 
@@ -644,7 +659,11 @@ i {
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto)/1fr;
     text-align: center;
-    position: relative; }
+    position: relative;
+    -webkit-transition: border .3s ease;
+    transition: border .3s ease; }
+    .discount__item:hover {
+      border: 1px solid red; }
 
 .item-discount__image {
   position: relative;
@@ -691,7 +710,8 @@ i {
   font-size: 16px;
   line-height: 24px;
   color: white;
-  padding: 10px; }
+  padding: 10px;
+  z-index: 2; }
   .item-discount__btn:hover {
     background: #d31414; }
 
