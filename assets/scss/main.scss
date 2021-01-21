@@ -263,7 +263,7 @@ i {
 		grid-template: 43px / repeat(7, auto);
 		align-items: center;
 		justify-items: stretch;
-		column-gap: 2px;
+		column-gap: 10px;
 		margin: 0;
 		padding: 0;
 		position: relative;
@@ -272,12 +272,12 @@ i {
 		background: url(../img/header/angle_down.png) right 3px top 50% / 8px auto no-repeat;
 		height: 100%;
 		display: grid;
-		grid-template: 1fr / auto;
+		grid-template: auto / auto;
 		align-items: center;
 		justify-items: start;
 		color: rgba(243, 243, 243, 1);
 		padding-left: 7px;
-		padding-right: 15px;
+		padding-right: 18px !important;
 		transition: background .3s ease;
 		cursor: pointer;
 		&:hover {
@@ -309,10 +309,11 @@ i {
 }
 .sublist {
 	padding: 15px 30px 40px 30px;
-	border: 1px solid  rgba(209, 209, 209, 1);
+	border: 1px solid rgba(209, 209, 209, 1);
 	border-top: none;
 	border-radius: 0 0 5px 5px;
 	line-height: 130%;
+	cursor: auto;
 	&__li {
 		margin: 0 0 20px 0;
 		break-inside: avoid;

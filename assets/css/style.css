@@ -245,8 +245,8 @@ i {
       -ms-flex-align: center;
           align-items: center;
   justify-items: stretch;
-  -webkit-column-gap: 2px;
-          column-gap: 2px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
   margin: 0;
   padding: 0;
   position: relative; }
@@ -254,14 +254,14 @@ i {
   background: url(../img/header/angle_down.png) right 3px top 50%/8px auto no-repeat;
   height: 100%;
   display: grid;
-  grid-template: 1fr / auto;
+  grid-template: auto / auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   justify-items: start;
   color: #f3f3f3;
   padding-left: 7px;
-  padding-right: 15px;
+  padding-right: 18px !important;
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
   cursor: pointer; }
@@ -294,7 +294,8 @@ i {
   border: 1px solid #d1d1d1;
   border-top: none;
   border-radius: 0 0 5px 5px;
-  line-height: 130%; }
+  line-height: 130%;
+  cursor: auto; }
   .sublist__li {
     margin: 0 0 20px 0;
     -webkit-column-break-inside: avoid;
