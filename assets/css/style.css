@@ -806,16 +806,16 @@ i {
   .footer__form {
     display: grid;
     grid-template: 1fr/minmax(20px, 1fr) minmax(auto, 890px) 263px minmax(20px, 1fr);
-    -webkit-column-gap: 20px;
-            column-gap: 20px;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch; }
   .footer__main {
     display: grid;
     grid-template: 1fr/minmax(20px, 1fr) minmax(auto, 573px) minmax(auto, 265px) minmax(auto, 285px) minmax(20px, 1fr);
-    -webkit-column-gap: 25px;
-            column-gap: 25px; }
+    -webkit-column-gap: 10px;
+            column-gap: 10px; }
   .footer__copyright {
     height: 100%;
     display: grid;
@@ -824,6 +824,14 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  @media (min-width: 870px) {
+    .footer__main {
+      -webkit-column-gap: 25px;
+              column-gap: 25px; } }
+  @media (min-width: 910px) {
+    .footer__form {
+      -webkit-column-gap: 20px;
+              column-gap: 20px; } }
 
 .form {
   background: #ff5758;
@@ -834,8 +842,8 @@ i {
   .form__lable {
     grid-column: 2 / 3;
     color: white;
-    font-size: 16px;
-    line-height: 20px; }
+    font-size: 14px;
+    line-height: 18px; }
   .form__item {
     grid-column: 3 / 4;
     height: 43px;
@@ -855,32 +863,50 @@ i {
     height: calc(100% - 6px);
     width: 37px;
     background: red url("../img/footer/arrow.png") center/12px auto no-repeat; }
+  @media (min-width: 910px) {
+    .form__lable {
+      font-size: 16px;
+      line-height: 20px; } }
 
-.main-footer__shop {
-  grid-column: 2 / 3; }
-.main-footer__contacts {
-  grid-column: 3 / 4; }
-.main-footer__payments {
-  grid-column: 4 / 5; }
+.main-footer {
+  padding: 25px 0 25px 0; }
+  .main-footer__shop {
+    grid-column: 2 / 3; }
+  .main-footer__contacts {
+    grid-column: 3 / 4; }
+  .main-footer__payments {
+    grid-column: 4 / 5; }
 
 .shop__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
+  -webkit-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 5px;
+          column-gap: 5px; }
   .shop__list li {
-    margin: 0 0 14px 0; }
+    margin: 0 0 10px 0; }
 .shop__link {
   color: #606060;
-  font-size: 14px; }
+  font-size: 12px; }
   .shop__link:hover {
     color: red; }
+@media (min-width: 870px) {
+  .shop__list li {
+    margin: 0 0 14px 0; }
+  .shop__link {
+    font-size: 14px;
+    line-height: 20px; } }
 
 .contacts__text {
   color: #606060;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
   margin: 0 0 10px 0; }
   .contacts__text span {
     color: black; }
+@media (min-width: 870px) {
+  .contacts__text {
+    font-size: 14px;
+    line-height: 20px; } }
 
 .payments__image {
   margin: 0 0 30px 0;
@@ -891,20 +917,36 @@ i {
     height: auto; }
 .payments__iconbar {
   display: grid;
-  grid-template: 43px/repeat(4, 43px);
-  -webkit-column-gap: 20px;
-          column-gap: 20px; }
+  grid-template: 35px/repeat(4, 35px);
+  -webkit-column-gap: 15px;
+          column-gap: 15px; }
 .payments__soc {
   background-image: url(../img/footer/soc.png);
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 188.84px auto; }
   .payments__soc:first-child {
     background-position: 0 0; }
   .payments__soc:nth-child(2) {
-    background-position: -63px 0; }
+    background-position: -51.5px 0; }
   .payments__soc:nth-child(3) {
-    background-position: -126px 0; }
+    background-position: -102.5px 0; }
   .payments__soc:nth-child(4) {
-    background-position: -189px 0; }
+    background-position: -154px 0; }
+@media (min-width: 870px) {
+  .payments__iconbar {
+    grid-template: 43px/repeat(4, 43px);
+    -webkit-column-gap: 20px;
+            column-gap: 20px; }
+  .payments__soc {
+    background-size: 232px auto; }
+    .payments__soc:first-child {
+      background-position: 0 0; }
+    .payments__soc:nth-child(2) {
+      background-position: -63px 0; }
+    .payments__soc:nth-child(3) {
+      background-position: -126px 0; }
+    .payments__soc:nth-child(4) {
+      background-position: -189px 0; } }
 
 .copyright__text {
   grid-column: 2 / 3;
