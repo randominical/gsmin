@@ -805,12 +805,7 @@ i {
   grid-template: minmax(55px, auto) minmax(285px, auto) minmax(50px, auto)/1fr; }
   .footer__form {
     display: grid;
-    grid-template: 1fr/minmax(20px, 1fr) minmax(auto, 890px) 263px minmax(20px, 1fr);
-    -webkit-column-gap: 10px;
-            column-gap: 10px;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch; }
+    grid-template: 1fr/minmax(20px, 1fr) minmax(auto, 100%) minmax(20px, 1fr); }
   .footer__main {
     display: grid;
     grid-template: 1fr/minmax(20px, 1fr) minmax(auto, 573px) minmax(auto, 265px) minmax(auto, 285px) minmax(20px, 1fr);
@@ -824,6 +819,14 @@ i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+  @media (min-width: 768px) {
+    .footer__form {
+      grid-template: 1fr/minmax(20px, 1fr) minmax(auto, 890px) 263px minmax(20px, 1fr);
+      -webkit-column-gap: 10px;
+              column-gap: 10px;
+      -webkit-box-pack: stretch;
+          -ms-flex-pack: stretch;
+              justify-content: stretch; } }
   @media (min-width: 870px) {
     .footer__main {
       -webkit-column-gap: 25px;
@@ -840,12 +843,9 @@ i {
       -ms-flex-align: center;
           align-items: center; }
   .form__lable {
-    grid-column: 2 / 3;
-    color: white;
-    font-size: 14px;
-    line-height: 18px; }
+    display: none; }
   .form__item {
-    grid-column: 3 / 4;
+    grid-column: 2 / 3;
     height: 43px;
     position: relative; }
   .form__input {
@@ -856,6 +856,8 @@ i {
     .form__input:focus {
       -webkit-box-shadow: inset 0px 0px 5px rgba(128, 128, 128, 0.5);
               box-shadow: inset 0px 0px 5px rgba(128, 128, 128, 0.5); }
+    .form__input_d {
+      display: none; }
   .form__btn {
     position: absolute;
     top: 3px;
@@ -863,6 +865,19 @@ i {
     height: calc(100% - 6px);
     width: 37px;
     background: red url("../img/footer/arrow.png") center/12px auto no-repeat; }
+  @media (min-width: 768px) {
+    .form__lable {
+      display: block;
+      grid-column: 2 / 3;
+      color: white;
+      font-size: 14px;
+      line-height: 18px; }
+    .form__item {
+      grid-column: 3 / 4; }
+    .form__input_d {
+      display: block; }
+    .form__input_m {
+      display: none; } }
   @media (min-width: 910px) {
     .form__lable {
       font-size: 16px;
