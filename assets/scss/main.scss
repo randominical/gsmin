@@ -945,16 +945,16 @@ i {
 	}
 	&__item {
 		grid-column: 2 / 3;
-		height: 43px;
+		height: 30px;
 		position: relative;
 	}
 	&__input {
 		height: 100%;
 		width: 100%;
-		border: 3px solid  rgba(255, 255, 255, 1);
-		padding: 15px 45px 15px 15px;
+		border: 1.5px solid rgba(255, 255, 255, 1);
+		padding: 10px 36px 10px 10px;
 		&:focus {
-			box-shadow: inset 0px 0px 5px rgba(128, 128, 128, .5);
+			box-shadow: inset 0px 0px 2px rgba(128, 128, 128, .5);
 		}
 		&_d {
 			display: none;
@@ -962,11 +962,12 @@ i {
 	}
 	&__btn {
 		position: absolute;
-		top: 3px;
-		right: 3px;
-		height: calc(100% - 6px);
-		width: 37px;
+		top: 50%;
+		right: 1px;
+		height: calc(100% - 3px);
+		width: 26px;
 		background: rgba(255, 0, 0, 1) url('../img/footer/arrow.png') center / 12px auto no-repeat;
+		transform: translate(0, -50%);
 	}
 	@media (min-width: 768px) {
 		&__lable {
@@ -978,14 +979,24 @@ i {
 		}
 		&__item {
 			grid-column: 3 / 4;
+			height: 43px;
 		}
 		&__input {
+			border: 3px solid rgba(255, 255, 255, 1);
+			padding: 15px 45px 15px 15px;
+			&:focus {
+				box-shadow: inset 0px 0px 5px rgba(128, 128, 128, .5);
+			}
 			&_d {
 				display: block;
 			}
 			&_m {
 				display: none;
 			}
+		}
+		&__btn {
+			height: calc(100% - 6px);
+			width: 37px;
 		}
 	}
 	@media (min-width: 910px) {
