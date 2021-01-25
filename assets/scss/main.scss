@@ -288,19 +288,33 @@ i {
 		position: relative;
 	}
 	&__li {
-		background: url(../img/header/angle_down.png) right 3px top 50% / 8px auto no-repeat;
 		height: 100%;
 		display: grid;
 		grid-template: auto / auto;
 		align-items: center;
 		justify-items: start;
 		color: rgba(243, 243, 243, 1);
-		padding-left: 7px;
-		padding-right: 18px !important;
 		transition: background .3s ease;
 		cursor: pointer;
+		span {
+			padding: 0 18px 3px 7px !important;
+			background: url(../img/header/angle_down.png) right 3px top 50% / 8px auto no-repeat;
+		}
 		&:hover {
-			background: url(../img/header/angle_up.png) right 3px top 50% / 8px auto no-repeat, rgba(211, 20, 20, 1) url(../img/header/underline.png) left 4px bottom 8px / calc(100% - 25px) 1px no-repeat;
+			background: rgba(211, 20, 20, 1);
+			span {
+				background: url(../img/header/angle_up.png) right 3px top 50% / 8px auto no-repeat;
+				position: relative;
+				&:after {
+					content: '';
+					width: calc(100% - 25px);
+					height: 2px;
+					background: white;
+					position: absolute;
+					left: 9px;
+					bottom: -4px;
+				}
+			}
 			.sublist {
 				display: block;
 				width: 1034px;

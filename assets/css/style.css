@@ -269,7 +269,6 @@ i {
   padding: 0;
   position: relative; }
 .bottom-header__li {
-  background: url(../img/header/angle_down.png) right 3px top 50%/8px auto no-repeat;
   height: 100%;
   display: grid;
   grid-template: auto / auto;
@@ -278,13 +277,25 @@ i {
           align-items: center;
   justify-items: start;
   color: #f3f3f3;
-  padding-left: 7px;
-  padding-right: 18px !important;
   -webkit-transition: background .3s ease;
   transition: background .3s ease;
   cursor: pointer; }
+  .bottom-header__li span {
+    padding: 0 18px 3px 7px !important;
+    background: url(../img/header/angle_down.png) right 3px top 50%/8px auto no-repeat; }
   .bottom-header__li:hover {
-    background: url(../img/header/angle_up.png) right 3px top 50%/8px auto no-repeat, #d31414 url(../img/header/underline.png) left 4px bottom 8px/calc(100% - 25px) 1px no-repeat; }
+    background: #d31414; }
+    .bottom-header__li:hover span {
+      background: url(../img/header/angle_up.png) right 3px top 50%/8px auto no-repeat;
+      position: relative; }
+      .bottom-header__li:hover span:after {
+        content: '';
+        width: calc(100% - 25px);
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: 9px;
+        bottom: -4px; }
     .bottom-header__li:hover .sublist {
       display: block;
       width: 1034px;
