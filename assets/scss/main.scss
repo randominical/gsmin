@@ -501,7 +501,7 @@ i {
 	}
 	&__item {
 		border: 1px solid rgba(227, 227, 227, 1);
-		padding: 6px 30px 30px 30px;
+		padding: 16px 30px 30px 30px;
 		display: grid;
 		grid-auto-flow: row;
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
@@ -590,7 +590,7 @@ i {
 	&__item {
 		background: rgba(255, 255, 255, 1);
 		border: 1px solid rgba(227, 227, 227, 1);
-		padding: 6px 30px 30px 30px;
+		padding: 16px 30px 30px 30px;
 		display: grid;
 		grid-auto-flow: row;
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
@@ -770,7 +770,7 @@ i {
 	&__item {
 		background: rgba(255, 255, 255, 1);
 		border: 1px solid rgba(227, 227, 227, 1);
-		padding: 6px 30px 30px 30px;
+		padding: 16px 30px 30px 30px;
 		display: grid;
 		grid-auto-flow: row;
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
@@ -1256,7 +1256,7 @@ i {
 //==============================
 .tag {
 	position: absolute;
-	top: 22px;
+	top: 10px;
 	font-weight: 600;
 	font-size: 12px;
 	color: rgba(255, 255, 255, 1);
@@ -1271,7 +1271,7 @@ i {
 		float: right;
 	}
 	&__unit {
-		margin: 0 0 20px 0;
+		margin: 10px 0 20px 0;
 		span {
 			display: inline;
 		}
