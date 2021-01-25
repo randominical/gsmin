@@ -1256,10 +1256,11 @@ i {
 //==============================
 .tag {
 	position: absolute;
-	top: 16px;
+	top: 22px;
 	font-weight: 600;
 	font-size: 12px;
 	color: rgba(255, 255, 255, 1);
+	display: inline;
 	&_left {
 		left: 0;
 		text-align: left;
@@ -1269,19 +1270,29 @@ i {
 		text-align: right;
 		float: right;
 	}
-	&__n {
-		padding: 7px 12px 7px 20px;
-		background:  url(../img/main/tag_n.png) left / cover no-repeat;
-	}
-	&__h {
-		padding: 7px 12px 7px 20px;
-		background: url(../img/main/tag_h.png) left / cover no-repeat;
-		margin: 0 0 7px 0;
-	}
-	&__d {
-		display: inline-block;
-		padding: 5px 12px 5px 20px;
-		background: url(../img/main/tag_d.png) left / cover no-repeat;
+	&__unit {
+		margin: 0 0 20px 0;
+		span {
+			display: inline;
+		}
+		&_n {
+			span {
+				padding: 7px 12px 7px 20px;
+				background:  url(../img/main/tag_n.png) left / cover no-repeat;
+			}
+		}
+		&_h {
+			span {
+				padding: 7px 12px 7px 20px;
+				background: url(../img/main/tag_h.png) left / cover no-repeat;
+			}
+		}
+		&_d {
+			span {
+				padding: 5px 12px 5px 20px;
+				background: url(../img/main/tag_d.png) left / cover no-repeat;
+			}
+		}
 	}
 	&__percent {
 		padding: 0 0 0 10px;
