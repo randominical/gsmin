@@ -278,16 +278,10 @@ i {
 		grid-column: 2 / 3;
 	}
 	&__list {
-		display: grid;
-		grid-template: 43px / repeat(7, auto);
-		align-items: center;
-		justify-items: stretch;
-		column-gap: 10px;
-		margin: 0;
-		padding: 0;
-		position: relative;
+		display: none;
 	}
 	&__li {
+		font-size: 12px;
 		height: 100%;
 		display: grid;
 		grid-template: auto / auto;
@@ -297,13 +291,14 @@ i {
 		transition: background .3s ease;
 		cursor: pointer;
 		span {
-			padding: 0 18px 3px 7px !important;
-			background: url(../img/header/angle_down.png) right 3px top 50% / 8px auto no-repeat;
+			white-space: nowrap;
+			padding: 0 15px 3px 7px !important;
+			background: url(../img/header/angle_down.png) right 3px top 5px / 6px auto no-repeat;
 		}
 		&:hover {
 			background: rgba(211, 20, 20, 1);
 			span {
-				background: url(../img/header/angle_up.png) right 3px top 50% / 8px auto no-repeat;
+				background: url(../img/header/angle_up.png) right 3px top 5px / 6px auto no-repeat;
 				position: relative;
 				&:after {
 					content: '';
@@ -317,9 +312,9 @@ i {
 			}
 			.sublist {
 				display: block;
-				width: 1034px;
+				width: 900px;
 				max-height: 650px;
-				column-width: 250px;
+				column-width: 180px;
 				column-gap: 15px;
 				column-fill: auto;
 				z-index: 2;
@@ -337,6 +332,47 @@ i {
 		}
 		&_r {
 			right: 0;
+		}
+	}
+	@media (min-width: 1010px) {
+		&__list {
+			display: grid;
+			grid-template: 43px / repeat(7, auto);
+		align-items: center;
+		justify-items: stretch;
+		column-gap: 3px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		}
+	}
+	@media (min-width: 1081px) {
+		&__list {
+			column-gap: 10px;
+		}
+		&__li {
+			&:hover {
+				.sublist {
+					width: 1034px;
+					column-width: 250px;
+				}
+			}
+		}
+	}
+	@media (min-width: 1210px) {
+		&__li {
+			font-size: 14px;
+			&:hover {
+				background: rgba(211, 20, 20, 1);
+				span {
+					background: url(../img/header/angle_up.png) right 3px top 50% / 8px auto no-repeat;
+					position: relative;
+				}
+			}
+			span {
+				padding: 0 18px 3px 7px !important;
+				background: url(../img/header/angle_down.png) right 3px top 50% / 8px auto no-repeat;
+			}
 		}
 	}
 }
