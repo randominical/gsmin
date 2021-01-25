@@ -38,13 +38,18 @@ body {
 }
 a,button, a *, button * {
 	cursor: pointer;
-	transition: color .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
+	transition: color .3s ease, fill .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
 }
 .title-section {
 	font-weight: bold;
-	font-size: 45px;
-	line-height: 55px;
-	margin: 0 0 35px 0;
+	font-size: 28px;
+	line-height: 36px;
+	margin: 0 0 20px 0;
+	@media (min-width: 481px) {
+		font-size: 45px;
+		line-height: 55px;
+		margin: 0 0 35px 0;
+	}
 }
 i {
 	font-family: 'icomoon' !important;
@@ -458,15 +463,24 @@ i {
 		}
 	}
 	&__lable {
-		font-weight: 600;
-		font-size: 24px;
-		line-height: 32px;
+		color: rgba(34, 34, 34, 1);
+		font-size: 18px;
+		line-height: 20px;
 		span {
-			margin-right: 15px;
+			margin-right: 5px;
 		}
 	}
 	&__arrow {
 		fill: rgba(34, 34, 34, 1);
+	}
+	@media (min-width: 481px) {
+		&__lable {
+			font-size: 24px;
+			line-height: 32px;
+			span {
+				margin-right: 15px;
+			}
+		}
 	}
 }
 //==============================
@@ -1022,19 +1036,25 @@ i {
 	}
 }
 .main-footer {
-	padding: 25px 0 25px 0;
+	padding: 10px 0 0 0;
 	&__shop {
 		display: none;
 	}
 	&__contacts {
 		grid-column: 2 / 5;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template: auto auto / 1fr;
 	}
 	&__payments {
 		display: none;
 	}
+	@media (min-width: 481px) {
+		&__contacts {
+			grid-template: 1fr / 1fr 1fr;
+		}
+	}
 	@media (min-width: 768px) {
+		padding: 25px 0 0 0;
 		&__shop {
 			display: block;
 			grid-column: 2 / 3;
@@ -1080,8 +1100,8 @@ i {
 	&__text {
 		max-width: 270px;
 		color: rgba(96, 96, 96, 1);
-		font-size: 15px;
-		line-height: 18px;
+		font-size: 12px;
+		line-height: 16px;
 		margin: 0 0 10px 0;
 		span {
 			color: rgba(0, 0, 0, 1);
@@ -1096,6 +1116,10 @@ i {
 			font-weight: bold;
 			margin: 0 0 10px 0;
 		}
+	}
+	@media (min-width: 481px) {
+		font-size: 15px;
+		line-height: 18px;
 	}
 	@media (min-width: 768px) {
 		&__text {
@@ -1178,7 +1202,8 @@ i {
 	&__body {
 		grid-column: 2 / 3;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template: auto auto / 1fr;
+		row-gap: 10px;
 	}
 	&__link {
 		color: rgba(63, 63, 63, 1);
@@ -1205,6 +1230,12 @@ i {
 				left: 0;
 				bottom: 1px;
 			}
+		}
+	}
+	@media (min-width: 481px) {
+		&__body {
+			grid-template: 1fr / 1fr 1fr;
+			row-gap: 0;
 		}
 	}
 } 

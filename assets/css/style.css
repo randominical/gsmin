@@ -32,16 +32,21 @@ body {
 
 a, button, a *, button * {
   cursor: pointer;
-  -webkit-transition: color .3s ease, border .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
-  transition: color .3s ease, border .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
-  transition: color .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
-  transition: color .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease; }
+  -webkit-transition: color .3s ease, fill .3s ease, border .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
+  transition: color .3s ease, fill .3s ease, border .3s ease, background .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease;
+  transition: color .3s ease, fill .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease;
+  transition: color .3s ease, fill .3s ease, border .3s ease, text-decoration .3s ease, background .3s ease, box-shadow .3s ease, -webkit-text-decoration .3s ease, -webkit-box-shadow .3s ease; }
 
 .title-section {
   font-weight: bold;
-  font-size: 45px;
-  line-height: 55px;
-  margin: 0 0 35px 0; }
+  font-size: 28px;
+  line-height: 36px;
+  margin: 0 0 20px 0; }
+  @media (min-width: 481px) {
+    .title-section {
+      font-size: 45px;
+      line-height: 55px;
+      margin: 0 0 35px 0; } }
 
 i {
   font-family: 'icomoon' !important;
@@ -411,13 +416,19 @@ i {
       -o-object-fit: cover;
          object-fit: cover; }
   .basic__lable {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px; }
+    color: #222222;
+    font-size: 18px;
+    line-height: 20px; }
     .basic__lable span {
-      margin-right: 15px; }
+      margin-right: 5px; }
   .basic__arrow {
     fill: #222222; }
+  @media (min-width: 481px) {
+    .basic__lable {
+      font-size: 24px;
+      line-height: 32px; }
+      .basic__lable span {
+        margin-right: 15px; } }
 
 .recommend {
   padding: 10px 0 40px 0;
@@ -907,25 +918,30 @@ i {
       line-height: 20px; } }
 
 .main-footer {
-  padding: 25px 0 25px 0; }
+  padding: 10px 0 0 0; }
   .main-footer__shop {
     display: none; }
   .main-footer__contacts {
     grid-column: 2 / 5;
     display: grid;
-    grid-template-columns: 1fr 1fr; }
+    grid-template: auto auto / 1fr; }
   .main-footer__payments {
     display: none; }
-  @media (min-width: 768px) {
-    .main-footer__shop {
-      display: block;
-      grid-column: 2 / 3; }
+  @media (min-width: 481px) {
     .main-footer__contacts {
-      display: block;
-      grid-column: 3 / 4; }
-    .main-footer__payments {
-      display: block;
-      grid-column: 4 / 5; } }
+      grid-template: 1fr / 1fr 1fr; } }
+  @media (min-width: 768px) {
+    .main-footer {
+      padding: 25px 0 0 0; }
+      .main-footer__shop {
+        display: block;
+        grid-column: 2 / 3; }
+      .main-footer__contacts {
+        display: block;
+        grid-column: 3 / 4; }
+      .main-footer__payments {
+        display: block;
+        grid-column: 4 / 5; } }
 
 .shop__list {
   -webkit-columns: 2;
@@ -949,8 +965,8 @@ i {
 .contacts__text {
   max-width: 270px;
   color: #606060;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
   margin: 0 0 10px 0; }
   .contacts__text span {
     color: black; }
@@ -961,6 +977,10 @@ i {
   color: #3f3f3f;
   font-weight: bold;
   margin: 0 0 10px 0; }
+@media (min-width: 481px) {
+  .contacts {
+    font-size: 15px;
+    line-height: 18px; } }
 @media (min-width: 768px) {
   .contacts__text {
     font-size: 12px;
@@ -1020,7 +1040,8 @@ i {
 .back-footer__body {
   grid-column: 2 / 3;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template: auto auto / 1fr;
+  row-gap: 10px; }
 .back-footer__link {
   color: #3f3f3f;
   font-size: 13px;
@@ -1042,6 +1063,10 @@ i {
       position: absolute;
       left: 0;
       bottom: 1px; }
+@media (min-width: 481px) {
+  .back-footer__body {
+    grid-template: 1fr / 1fr 1fr;
+    row-gap: 0; } }
 
 .copyright__text {
   grid-column: 2 / 3;
