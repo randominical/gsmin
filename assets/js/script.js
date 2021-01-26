@@ -65,30 +65,11 @@ let discountSwiper = new Swiper ('.discount__container', {
     },
   },
 });
-/*
-let newSlider = new Swiper('.new__container', {
-  direction: 'horizontal',
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: '.new__btn_n',
-    prevEl: '.new__btn_p',
-  },
-  slidesPerView: 1,
-});
 
-let w = window.innerWidth;
-
-function initNewSlider() {
-  if (w <= 768) {
-    newSlider.init();
-  }
-};
-*/
+let screenWidth = window.outerWidth;
 
 let newSlider = undefined;
   function initNewSwiper() {
-    let screenWidth = window.outerWidth;
     if ( (screenWidth < (768)) && (newSlider == undefined)) {
       newSlider = new Swiper('.new__container', {
         direction: 'horizontal',
@@ -109,4 +90,28 @@ let newSlider = undefined;
 
   window.addEventListener('resize', function(event){
     initNewSwiper();
+  });
+
+  let hitsSlider = undefined;
+  function initHitsSwiper() {
+    if ( (screenWidth < (768)) && (hitsSlider == undefined)) {
+      hitsSlider = new Swiper('.hits__container', {
+        direction: 'horizontal',
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: '.hits__btn_n',
+          prevEl: '.hits__btn_p',
+        },
+        slidesPerView: 1,
+      });
+    } else if ((screenWidth > 767) && (hitsSlider != undefined)) {
+      hitsSlider.destroy();
+      hitsSlider = undefined;
+    }
+  }
+  initHitsSwiper();
+
+  window.addEventListener('resize', function(event){
+    initHitsSwiper();
   });

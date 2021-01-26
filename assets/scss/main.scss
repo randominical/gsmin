@@ -733,10 +733,11 @@ i {
 	background: rgba(255, 255, 255, 1);
 	display: grid;
 	grid-template: minmax(55px, auto) 1fr / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
+	position: relative;
 	&__title {
 		grid-column: 2 / 3;
 	}
-	&__body {
+	&__container {
 		grid-column: 2 / 3;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -817,6 +818,24 @@ i {
 		z-index: 2;
 		&:hover {
 			background: rgba(211, 20, 20, 1);
+		}
+	}
+	@media (min-width: 767px) {
+		&__container {
+			grid-column: 2 / 3;
+			display: block;
+			width: 100%;
+			overflow: visible;
+		}
+		&__wrapper {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			grid-auto-rows: 1fr;
+			column-gap: 15px;
+			row-gap: 15px;
+		}
+		&__btns {
+			display: none !important;
 		}
 	}
 }
