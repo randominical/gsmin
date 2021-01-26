@@ -722,7 +722,7 @@ i {
 			column-gap: 15px;
 			row-gap: 15px;
 		}
-		&__btns {
+		&__arrows {
 			display: none !important;
 		}
 	}
@@ -834,7 +834,7 @@ i {
 			column-gap: 15px;
 			row-gap: 15px;
 		}
-		&__btns {
+		&__arrows {
 			display: none !important;
 		}
 	}
@@ -1413,7 +1413,7 @@ i {
 	}
 }
 //==============================
-.btns {
+.arrows {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -1426,7 +1426,7 @@ i {
 		grid-template: 68px / minmax(15px, 1fr) 68px minmax(auto, 1170px) 68px minmax(15px, 1fr);
 	}
 }
-.swiper-btn {
+.swiper-arrow {
 	width: 36px;
 	height: 36px;
 	border-radius: 50%;

@@ -631,7 +631,7 @@ i {
       -webkit-column-gap: 15px;
               column-gap: 15px;
       row-gap: 15px; }
-    .new__btns {
+    .new__arrows {
       display: none !important; } }
 
 .hits {
@@ -734,7 +734,7 @@ i {
       -webkit-column-gap: 15px;
               column-gap: 15px;
       row-gap: 15px; }
-    .hits__btns {
+    .hits__arrows {
       display: none !important; } }
 
 .discount {
@@ -1199,7 +1199,7 @@ i {
   .stock__right {
     color: white; }
 
-.btns {
+.arrows {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1210,10 +1210,10 @@ i {
   grid-template: 36px/minmax(15px, 1fr) 36px minmax(auto, 1170px) 36px minmax(15px, 1fr);
   z-index: 1; }
   @media (min-width: 768px) {
-    .btns {
+    .arrows {
       grid-template: 68px/minmax(15px, 1fr) 68px minmax(auto, 1170px) 68px minmax(15px, 1fr); } }
 
-.swiper-btn {
+.swiper-arrow {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -1223,7 +1223,7 @@ i {
   overflow: hidden;
   cursor: pointer;
   position: relative; }
-  .swiper-btn::after {
+  .swiper-arrow::after {
     content: '';
     position: absolute;
     -webkit-transition: background .3s ease;
@@ -1235,22 +1235,22 @@ i {
     width: 100%;
     height: 100%;
     background: url("../img/slider/arrow.svg") center/11.6px auto no-repeat; }
-  .swiper-btn:hover::after {
+  .swiper-arrow:hover::after {
     background: url("../img/slider/arrow_r.svg") center/11.6px auto no-repeat; }
-  .swiper-btn-prev {
+  .swiper-arrow-prev {
     grid-column: 2 / 3; }
-  .swiper-btn-next {
+  .swiper-arrow-next {
     grid-column: 4 / 5; }
-    .swiper-btn-next::after {
+    .swiper-arrow-next::after {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
   @media (min-width: 768px) {
-    .swiper-btn {
+    .swiper-arrow {
       width: 68px;
       height: 68px; }
-      .swiper-btn::after {
+      .swiper-arrow::after {
         background: url("../img/slider/arrow.svg") center/23px auto no-repeat; }
-      .swiper-btn:hover::after {
+      .swiper-arrow:hover::after {
         background: url("../img/slider/arrow_r.svg") center/23px auto no-repeat; } }
 
 /*# sourceMappingURL=style.css.map */
