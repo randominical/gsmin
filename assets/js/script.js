@@ -64,4 +64,49 @@ let discountSwiper = new Swiper ('.discount__container', {
       slidesPerView: 4,
     },
   },
-})
+});
+/*
+let newSlider = new Swiper('.new__container', {
+  direction: 'horizontal',
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.new__btn_n',
+    prevEl: '.new__btn_p',
+  },
+  slidesPerView: 1,
+});
+
+let w = window.innerWidth;
+
+function initNewSlider() {
+  if (w <= 768) {
+    newSlider.init();
+  }
+};
+*/
+
+let newSlider = undefined;
+  function initNewSwiper() {
+    let screenWidth = window.outerWidth;
+    if ( (screenWidth < (768)) && (newSlider == undefined)) {
+      newSlider = new Swiper('.new__container', {
+        direction: 'horizontal',
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: '.new__btn_n',
+          prevEl: '.new__btn_p',
+        },
+        slidesPerView: 1,
+      });
+    } else if ((screenWidth > 767) && (newSlider != undefined)) {
+      newSlider.destroy();
+      newSlider = undefined;
+    }
+  }
+  initNewSwiper();
+
+  window.addEventListener('resize', function(event){
+    initNewSwiper();
+  });
