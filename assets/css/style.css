@@ -618,7 +618,7 @@ i {
     z-index: 2; }
     .new__btn:hover {
       background: #d31414; }
-  @media (min-width: 768px) {
+  @media (min-width: 767px) {
     .new__container {
       grid-column: 2 / 3;
       display: block;
@@ -721,7 +721,7 @@ i {
     z-index: 2; }
     .hits__btn:hover {
       background: #d31414; }
-  @media (min-width: 768px) {
+  @media (min-width: 767px) {
     .hits__container {
       grid-column: 2 / 3;
       display: block;
