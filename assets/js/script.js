@@ -73,7 +73,6 @@ let newSlider = undefined;
     if ( (screenWidth < (768)) && (newSlider == undefined)) {
       newSlider = new Swiper('.new__container', {
         direction: 'horizontal',
-        spaceBetween: 30,
         loop: true,
         navigation: {
           nextEl: '.new__btn_n',
@@ -97,7 +96,6 @@ let newSlider = undefined;
     if ( (screenWidth < (768)) && (hitsSlider == undefined)) {
       hitsSlider = new Swiper('.hits__container', {
         direction: 'horizontal',
-        spaceBetween: 30,
         loop: true,
         navigation: {
           nextEl: '.hits__btn_n',
