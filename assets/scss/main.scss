@@ -349,6 +349,9 @@ i {
 		margin: 0 0 10px 0;
 	}
 	@media (min-width: 1010px) {
+		&__burger {
+			display: none;
+		}
 		&__list {
 			display: grid;
 			grid-template: 43px / repeat(7, auto);

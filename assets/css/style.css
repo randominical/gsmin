@@ -321,6 +321,8 @@ i {
   padding: 3px 3px 3px 3px !important;
   margin: 0 0 10px 0; }
 @media (min-width: 1010px) {
+  .bottom-header__burger {
+    display: none; }
   .bottom-header__list {
     display: grid;
     grid-template: 43px/repeat(7, auto);
