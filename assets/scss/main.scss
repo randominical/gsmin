@@ -92,9 +92,9 @@ i {
 .header {
 	padding: 5px 0 5px 0;
 	grid-area: header;
-	align-items: center;
 	display: grid;
 	grid-template: 58px / minmax(20px, 1fr) 40px minmax(142px, 1133px) minmax(20px, 1fr);
+	align-items: center;
 	&__top {
 		display: none;
 	}
@@ -335,8 +335,9 @@ i {
 }
 .bottom-header {
 	&__burger {
-		width: 20px;
-		height: 14px;
+		width: 37px;
+		height: 36px;
+		background-color: red;
 		position: relative;
 		cursor: pointer;
 		z-index: 4;
@@ -344,10 +345,10 @@ i {
 			background: rgba(255, 255, 255, 1);
 			box-shadow: 0 0 1px rgba(60,70,78,1);
 			position: absolute;
-			width: 100%;
+			width: 22px;
 			height: 2px;
-			left: 0;
-			top: 6px;
+			left: 7px;
+			top: 18px;
 			transition: all .4s ease-out;
 		}
 		&:before, &:after {
@@ -355,16 +356,16 @@ i {
 			background: rgba(255, 255, 255, 1);
 			box-shadow: 0 0 1px rgba(60,70,78,1);
 			position: absolute;
-			width: 100%;
+			width: 22px;
 			height: 2px;
-			left: 0;
+			left: 7px;
 			transition: all .4s ease-out;
 		}
 		&:before {
-			top: 0;
+			top: 12px;
 		}
 		&:after {
-			bottom: 0;
+			top: 24px;
 		}
 		&.active {
 			&:before {
@@ -384,8 +385,19 @@ i {
 		}
 	}
 	&__menu {
-		grid-column: 2 / 3;
+		width: 100%;
+		padding: 70px 10px 30px 10px;
+		background-color: rgba(255, 255, 255, 1);
+		border-bottom: 1px solid rgba(209, 209, 209, 1);
+		position: absolute;
+		top: -100%;
+		left: -100%;
+		z-index: 2;
 		//display: none;
+		&:active {
+			top: 0;
+			left: 0;
+		}
 	}
 	&__list {
 		display: block;
@@ -394,10 +406,49 @@ i {
 		font-size: 14px;
 		display: block;
 		color: rgba(54, 54, 54, 1);
-		padding: 3px 3px 3px 3px !important;
-		margin: 0 0 10px 0;
+		padding: 5px 10px 5px 3px !important;
+		margin: 0 0 11px 0;
+	}
+	&__sublist {
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+	@media (min-width: 480px) {
+		&__menu {
+			width: auto;
+			height: auto;
+			border: 1px solid rgba(209, 209, 209, 1);
+			padding: 70px 0px 20px 20px;
+		}
+		&__link {
+			background: url(../img/header/angle_down.png) right 3px top 18px / 6px auto no-repeat;
+		}
+		&__li {
+			&:hover {
+				.sublist {
+					display: block;
+					z-index: 3;
+				}
+			}
+		}
+	}
+	@media (min-width: 768px) {
+		&__li {
+			position: static;
+			height: 100%;
+			padding: 0;
+		}
 	}
 	@media (min-width: 1010px) {
+		&__menu {
+			grid-column: 2 / 3;
+			position: static;
+			display: block;
+			background-color:transparent;
+			border: none;
+			padding: 0;
+		}
 		&__burger {
 			display: none;
 		}
@@ -411,21 +462,6 @@ i {
 			padding: 0;
 			position: relative;
 		}
-		&__li {
-			height: 100%;
-			padding: 0;
-			&:hover {
-				.sublist {
-					display: block;
-					width: 900px;
-					max-height: 650px;
-					column-width: 180px;
-					column-gap: 15px;
-					column-fill: auto;
-					z-index: 2;
-				}
-			}
-		}
 		&__link {
 			font-size: 12px;
 			height: 100%;
@@ -435,6 +471,7 @@ i {
 			justify-items: start;
 			color: rgba(243, 243, 243, 1);
 			white-space: nowrap;
+			margin: 0 0 10px 0;
 			padding: 0 15px 3px 7px !important;
 			background: url(../img/header/angle_down.png) right 3px top 18px / 6px auto no-repeat;
 			&:hover {
@@ -451,23 +488,14 @@ i {
 			}
 		}
 		&__sublist {
-			display: none;
-			background:rgba(243, 243, 243, 1);
-			position: absolute;
 			top: 100%;
-			z-index: -1;
 			&_l {
 				left: 0;
 			}
 			&_r {
+				left: auto;
 				right: 0;
 			}
-		}
-	}
-	@media (min-width: 1081px) {
-		.sublist {
-			width: 1034px;
-			column-width: 250px;
 		}
 	}
 	@media (min-width: 1210px) {
@@ -483,22 +511,23 @@ i {
 }
 .sublist {
 	display: none;
-	@media (min-width: 1010px) {
-		padding: 15px 30px 40px 30px;
+	@media (min-width: 480px) {
+		width: 190px;
+		background:rgba(243, 243, 243, 1);
 		border: 1px solid rgba(209, 209, 209, 1);
-		border-top: none;
-		border-radius: 0 0 5px 5px;
+		border-radius: 0 5px 5px 5px;
 		line-height: 130%;
+		padding: 15px 10px 30px 7px;
+		z-index: -1;
 		cursor: auto;
-		&__li {
-			margin: 0 0 20px 0;
-			break-inside: avoid;
-		}
 		p {
-			font-size: 16px;
+			font-size: 12px;
 			font-weight: bold;
 			color:rgba(102, 204, 255, 1);
 			margin: 0 0 10px 0;
+		}
+		&__li {
+			margin: 0 0 8px 0;
 		}
 		&__link {
 			display: block;
@@ -517,6 +546,38 @@ i {
 				text-decoration: underline;
 			}
 		}
+	}
+	@media (min-width: 768px) {
+		width: 450px;
+		column-width: 180px;
+		column-gap: 15px;
+		column-fill: auto;
+		&__li {
+			break-inside: avoid;
+		}
+		p {
+			font-size: 14px;
+		}
+	}
+	@media (min-width: 1010px) {
+		width: 900px;
+		max-height: 650px;
+		column-width: 180px;
+		column-gap: 15px;
+		column-fill: auto;
+		padding: 15px 30px 40px 30px;
+		border-top: none;
+		border-radius: 0 0 5px 5px;
+		&__li {
+			margin: 0 0 20px 0;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+	@media (min-width: 1081px) {
+		width: 1034px;
+		column-width: 250px;
 	}
 }
 //==============================
