@@ -100,7 +100,7 @@ i {
 	}
 	&__main {
 		display: grid;
-		grid-template: 1fr / minmax(20px, 1fr) 170px minmax(auto, 360px) minmax(auto, 435px) minmax(auto, 163px) minmax(20px, 1fr);
+		grid-template: 1fr / minmax(20px, 1fr) 170px minmax(auto, 946px) 57px minmax(20px, 1fr);
 		align-items: center;
 		justify-items: stretch;
 		column-gap: 15px;
@@ -114,6 +114,9 @@ i {
 	}
 	@media (min-width: 1010px) {
 		padding: 37px 0 0 0;
+		&__main {
+			grid-template: 1fr / minmax(20px, 1fr) 170px minmax(auto, 360px) minmax(auto, 435px) minmax(auto, 163px) minmax(20px, 1fr);
+		}
 		&__top {
 			background-color: rgba(243, 243, 243, 1);
 			display: grid;
@@ -177,43 +180,12 @@ i {
 			height: auto;
 		}
 	}
-	&__phones {
-		grid-column: 3 / 4;
-		justify-self: end;
-		display: grid;
-		grid-template: 1fr 1fr / 1fr;
-		row-gap: 8px;
-		padding: 0 18px 0 53px;
-		background: url('../img/header/icon_phone.png') left / 17px 28px no-repeat;
-		position: relative;
-		&::before {
-			content: '';
-			position: absolute;
-			width: 1px;
-			height: 100%;
-			background: rgba(224, 224, 224, 1);
-			top: 0;
-			left: 33px;
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			width: 1px;
-			height: 100%;
-			background: rgba(224, 224, 224, 1);
-			top: 0;
-			right: 0;
-		}
-	}
-	&__search {
-		grid-column: 4 / 5;
+	&__phones, &__search {
+		display: none;
 	}
 	&__private {
-		grid-column: 5 / 6;
-		display: grid;
-		grid-template: 1fr / repeat(2, auto);
-		justify-items: stretch;
-		column-gap: 20px;
+		grid-column: 4 / 5;
+		margin-top: 10px;
 	}
 	&__tel {
 		font-size: 21px;
@@ -224,14 +196,7 @@ i {
 		}
 	}
 	&__cabinet {
-		display: grid;
-		grid-template: 1fr 1fr / 1fr;
-		align-items: center;
-		justify-items: center;
-		img {
-			width: 25px;
-			height: auto;
-		}
+		display: none;
 	}
 	&__basket {
 		display: grid;
@@ -242,6 +207,57 @@ i {
 		img {
 			width: 34px;
 			height: auto;
+		}
+	}
+	@media (min-width: 1010px) {
+		&__phones {
+			grid-column: 3 / 4;
+			justify-self: end;
+			display: grid;
+			grid-template: 1fr 1fr / 1fr;
+			row-gap: 8px;
+			padding: 0 18px 0 53px;
+			background: url('../img/header/icon_phone.png') left / 17px 28px no-repeat;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				background: rgba(224, 224, 224, 1);
+				top: 0;
+				left: 33px;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				background: rgba(224, 224, 224, 1);
+				top: 0;
+				right: 0;
+			}
+		}
+		&__search {
+			grid-column: 4 / 5;
+			display: block;
+		}
+		&__private {
+			grid-column: 5 / 6;
+			display: grid;
+			grid-template: 1fr / repeat(2, auto);
+			justify-items: stretch;
+			column-gap: 20px;
+		}
+		&__cabinet {
+			display: grid;
+			grid-template: 1fr 1fr / 1fr;
+			align-items: center;
+			justify-items: center;
+			img {
+				width: 25px;
+				height: auto;
+			}
 		}
 	}
 }
