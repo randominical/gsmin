@@ -112,7 +112,7 @@ i {
 		grid-template: 1fr / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
 		font-weight: 600;
 	}
-	@media (min-width: 950px) {
+	@media (min-width: 1010px) {
 		padding: 37px 0 0 0;
 		&__top {
 			background-color: rgba(243, 243, 243, 1);
@@ -121,8 +121,6 @@ i {
 			align-items: center;
 			column-gap: 1px;
 		}
-	}
-	@media (min-width: 1010px) {
 		&__bottom {
 			background-color:rgba(252, 25, 25, 1);
 		}
