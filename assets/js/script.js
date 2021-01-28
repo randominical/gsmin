@@ -1,3 +1,18 @@
+let menuButton = document.querySelector('.bottom-header__burger');
+let menu = document.querySelector('.bottom-header__menu');
+let menuList = document.querySelector('.bottom-header__list');
+
+menuButton.onclick = function() {
+  menuButton.classList.toggle('active');
+  menu.classList.toggle('active');
+};
+
+menuList.onclick = function() {
+  menuButton.classList.toggle('active');
+  menu.classList.toggle('active');
+};
+
+
 let mainSwiper = new Swiper ('.carousel__container', {
   direction: 'horizontal',
   slidesPerView: 1,

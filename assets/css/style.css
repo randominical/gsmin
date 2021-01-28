@@ -307,8 +307,6 @@ i {
   z-index: 4; }
   .bottom-header__burger span {
     background: white;
-    -webkit-box-shadow: 0 0 1px #3c464e;
-            box-shadow: 0 0 1px #3c464e;
     position: absolute;
     width: 22px;
     height: 2px;
@@ -319,30 +317,24 @@ i {
   .bottom-header__burger:before, .bottom-header__burger:after {
     content: '';
     background: white;
-    -webkit-box-shadow: 0 0 1px #3c464e;
-            box-shadow: 0 0 1px #3c464e;
     position: absolute;
     width: 22px;
     height: 2px;
     left: 7px;
-    -webkit-transition: all .4s ease-out;
-    transition: all .4s ease-out; }
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out; }
   .bottom-header__burger:before {
     top: 12px; }
   .bottom-header__burger:after {
     top: 24px; }
   .bottom-header__burger.active:before {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background: #3c464e;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    top: 6px; }
+    top: 19px; }
   .bottom-header__burger.active:after {
-    background: #3c464e;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    bottom: 6px; }
+    top: 19px; }
   .bottom-header__burger.active span {
     -webkit-transform: scale(0);
             transform: scale(0); }
@@ -352,15 +344,20 @@ i {
   background-color: white;
   border-bottom: 1px solid #d1d1d1;
   position: absolute;
-  top: -100%;
-  left: -100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
   z-index: 2; }
-  .bottom-header__menu:active {
-    top: 0;
-    left: 0; }
+  .bottom-header__menu.active {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
 .bottom-header__list {
   display: block; }
 .bottom-header__link {
+  text-align: center;
   font-size: 14px;
   display: block;
   color: #363636;
@@ -377,7 +374,7 @@ i {
     border: 1px solid #d1d1d1;
     padding: 70px 0px 20px 20px; }
   .bottom-header__link {
-    background: url(../img/header/angle_down.png) right 3px top 18px/6px auto no-repeat; }
+    text-align: left; }
   .bottom-header__li:hover .sublist {
     display: block;
     z-index: 3; } }
@@ -393,7 +390,9 @@ i {
     display: block;
     background-color: transparent;
     border: none;
-    padding: 0; }
+    padding: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
   .bottom-header__burger {
     display: none; }
   .bottom-header__list {

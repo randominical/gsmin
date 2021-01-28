@@ -343,7 +343,6 @@ i {
 		z-index: 4;
 		span {
 			background: rgba(255, 255, 255, 1);
-			box-shadow: 0 0 1px rgba(60,70,78,1);
 			position: absolute;
 			width: 22px;
 			height: 2px;
@@ -354,12 +353,11 @@ i {
 		&:before, &:after {
 			content: '';
 			background: rgba(255, 255, 255, 1);
-			box-shadow: 0 0 1px rgba(60,70,78,1);
 			position: absolute;
 			width: 22px;
 			height: 2px;
 			left: 7px;
-			transition: all .4s ease-out;
+			transition: all .3s ease-out;
 		}
 		&:before {
 			top: 12px;
@@ -369,15 +367,12 @@ i {
 		}
 		&.active {
 			&:before {
-				box-shadow: none;
-				background: rgba(60,70,78,1);
 				transform: rotate(45deg);
-				top: 6px;
+				top: 19px;
 			}
 			&:after {
-				background: rgba(60,70,78,1);
 				transform: rotate(-45deg);
-				bottom: 6px;
+				top: 19px;
 			}
 			span {
 				transform: scale(0);
@@ -390,19 +385,20 @@ i {
 		background-color: rgba(255, 255, 255, 1);
 		border-bottom: 1px solid rgba(209, 209, 209, 1);
 		position: absolute;
-		top: -100%;
-		left: -100%;
+		top: 0;
+		left: 0;
+		transform: translate(-100%, 0);
+		transition: all .3s ease-out;
 		z-index: 2;
-		//display: none;
-		&:active {
-			top: 0;
-			left: 0;
+		&.active {
+			transform: translate(0, 0);
 		}
 	}
 	&__list {
 		display: block;
 	}
 	&__link {
+		text-align: center;
 		font-size: 14px;
 		display: block;
 		color: rgba(54, 54, 54, 1);
@@ -422,7 +418,7 @@ i {
 			padding: 70px 0px 20px 20px;
 		}
 		&__link {
-			background: url(../img/header/angle_down.png) right 3px top 18px / 6px auto no-repeat;
+			text-align: left;
 		}
 		&__li {
 			&:hover {
@@ -448,6 +444,7 @@ i {
 			background-color:transparent;
 			border: none;
 			padding: 0;
+			transform: translate(0, 0);
 		}
 		&__burger {
 			display: none;
