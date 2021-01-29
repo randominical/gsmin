@@ -79,7 +79,7 @@ let discountSwiper = new Swiper ('.discount__container', {
     },
   },
 });
-
+/*проблема с resize*/
 let screenWidth = window.outerWidth;
 
 let newSlider = undefined;
