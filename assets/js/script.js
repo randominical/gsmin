@@ -12,7 +12,6 @@ menuList.onclick = function() {
   menu.classList.toggle('active');
 };
 
-
 let mainSwiper = new Swiper ('.carousel__container', {
   direction: 'horizontal',
   slidesPerView: 1,
@@ -93,7 +92,15 @@ function initNewSwiper() {
         nextEl: '.new__arrow_n',
         prevEl: '.new__arrow_p',
       },
-      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        595: {
+            slidesPerView: 2,
+        },
+      },
     });
   } else if ((screenWidth > 767) && (newSlider != undefined)) {
     newSlider.destroy();
@@ -116,7 +123,15 @@ function initHitsSwiper() {
         nextEl: '.hits__arrow_n',
         prevEl: '.hits__arrow_p',
       },
-      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        595: {
+            slidesPerView: 2,
+        },
+      },
     });
   } else if ((screenWidth > 767) && (hitsSlider != undefined)) {
     hitsSlider.destroy();
