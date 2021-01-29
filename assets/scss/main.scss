@@ -94,6 +94,7 @@ i {
 	grid-area: header;
 	display: grid;
 	grid-template: 58px / minmax(20px, 1fr) 40px minmax(142px, 1133px) minmax(20px, 1fr);
+	column-gap: 5px;
 	align-items: center;
 	&__top {
 		display: none;
@@ -102,7 +103,8 @@ i {
 		grid-row: 1 / 2;
 		grid-column: 3 / 4;
 		display: grid;
-		grid-template: 1fr / minmax(20px, 1fr) 112px minmax(auto, 946px) 30px minmax(20px, 1fr);
+		grid-template: 1fr / 112px minmax(auto, 926px) 50px;
+		//grid-template: 1fr / 112px minmax(auto, 926px) 30px minmax(20px, 1fr);
 		align-items: center;
 		justify-items: stretch;
 		column-gap: 15px;
@@ -113,16 +115,12 @@ i {
 		grid-column: 2 / 3;
 		background-color: rgba(243, 243, 243, 1);
 		display: grid;
-		grid-template: 1fr / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
+		grid-template: 1fr / 1fr;
 		font-weight: 600;
 	}
-	@media (min-width: 768px) {
-		&__main {
-			grid-template: 1fr / minmax(20px, 1fr) 170px minmax(auto, 946px) 57px minmax(20px, 1fr);
-		}
-	}
-	@media (min-width: 1010px) {
+	@media (min-width: 1025px) {
 		grid-template: minmax(85px, auto) minmax(40px, auto) / 1fr;
+		column-gap: 0px;
 		padding: 37px 0 0 0;
 		&__main {
 			grid-column: 1 / 2;
@@ -138,6 +136,7 @@ i {
 		&__bottom {
 			grid-row: 2 / 3;
 			grid-column: 1 / 2;
+			grid-template: 1fr / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
 			background-color:rgba(252, 25, 25, 1);
 		}
 	}
@@ -186,7 +185,7 @@ i {
 }
 .main-header {
 	&__logo {
-		grid-column: 2 / 3;
+		grid-column: 1 / 2;
 		overflow: hidden;
 		img {
 			width: 100%;
@@ -197,7 +196,7 @@ i {
 		display: none;
 	}
 	&__private {
-		grid-column: 4 / 5;
+		grid-column: 3 / 4;
 		margin-top: 10px;
 	}
 	&__tel {
@@ -231,7 +230,10 @@ i {
 			}
 		}
 	}
-	@media (min-width: 1010px) {
+	@media (min-width: 1025px) {
+		&__logo {
+			grid-column: 2 / 3;
+		}
 		&__phones {
 			grid-column: 3 / 4;
 			justify-self: end;
@@ -309,10 +311,11 @@ i {
 	}
 }
 .basket {
+	font-size: 10px;
 	&__number {
 		position: absolute;
 		top: -5px;
-		left: 30px;
+		left: 28px;
 		padding: 1.8px 3.4px;
 		background: rgba(252, 25, 25, 1);
 		border-radius: 50%;
@@ -321,15 +324,17 @@ i {
 		text-align: center;
 	}
 	@media (min-width: 768px) {
+		font-size: 12px;
 		&__number {
-			left: 37px;
+			left: 35px;
 			padding: 3.8px 5.4px;
 			font-size: 10px;
 		}
 	}
-	@media (min-width: 1010px) {
+	@media (min-width: 1025px) {
+		font-size: 14px;
 		&__number {
-			left: 42px;
+			left: 45px;
 		}
 	}
 }
@@ -405,7 +410,7 @@ i {
 		margin: 0 0 25px 0;
 	}
 	&__link {
-		font-size: 14px;
+		font-size: 12px;
 		display: inline;
 		color: rgba(54, 54, 54, 1);
 		padding: 5px 10px 5px 3px !important;
@@ -427,7 +432,7 @@ i {
 		top: 0;
 		left: 100%;
 	}
-	@media (min-width: 1010px) {
+	@media (min-width: 1025px) {
 		&__menu {
 			grid-column: 2 / 3;
 			position: static;
@@ -451,6 +456,8 @@ i {
 			position: relative;
 		}
 		&__li {
+			text-align: left;
+			margin: 0;
 			&:hover {
 				.sublist {
 					display: block;
@@ -508,23 +515,23 @@ i {
 }
 .sublist {
 	display: none;
-	@media (min-width: 480px) {
-		width: 190px;
+	@media (min-width: 1025px) {
 		background:rgba(243, 243, 243, 1);
 		border: 1px solid rgba(209, 209, 209, 1);
-		border-radius: 0 5px 5px 5px;
 		line-height: 130%;
-		padding: 15px 10px 30px 7px;
+		width: 900px;
+		max-height: 650px;
+		column-width: 180px;
+		column-gap: 15px;
+		column-fill: auto;
+		padding: 15px 30px 40px 30px;
+		border-top: none;
+		border-radius: 0 0 5px 5px;
 		z-index: -1;
 		cursor: auto;
-		p {
-			font-size: 12px;
-			font-weight: bold;
-			color:rgba(102, 204, 255, 1);
-			margin: 0 0 10px 0;
-		}
 		&__li {
-			margin: 0 0 8px 0;
+			break-inside: avoid;
+			margin: 0 0 20px 0;
 		}
 		&__link {
 			display: block;
@@ -543,33 +550,11 @@ i {
 				text-decoration: underline;
 			}
 		}
-	}
-	@media (min-width: 768px) {
-		width: 450px;
-		column-width: 180px;
-		column-gap: 15px;
-		column-fill: auto;
-		&__li {
-			break-inside: avoid;
-		}
-		p {
-			font-size: 14px;
-		}
-	}
-	@media (min-width: 1010px) {
-		width: 900px;
-		max-height: 650px;
-		column-width: 180px;
-		column-gap: 15px;
-		column-fill: auto;
-		padding: 15px 30px 40px 30px;
-		border-top: none;
-		border-radius: 0 0 5px 5px;
-		&__li {
-			margin: 0 0 20px 0;
-		}
 		p {
 			font-size: 16px;
+			font-weight: bold;
+			color:rgba(102, 204, 255, 1);
+			margin: 0 0 10px 0;
 		}
 	}
 	@media (min-width: 1081px) {
