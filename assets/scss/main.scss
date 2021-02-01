@@ -98,6 +98,14 @@ i {
 		&__container {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			grid-auto-rows: 1fr;
+		}
+		&__wrapper_s {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			grid-auto-rows: 1fr;
+			column-gap: 15px;
+			row-gap: 15px;
 		}
 		&__item {
 			&:hover {
@@ -680,12 +688,12 @@ i {
 }
 //==============================
 .carousel {
+	height: 340px;
 	display: grid;
 	grid-template: 1fr / 1fr;
 	position: relative;
 	&__container {
 		width: 100%;
-		height: 340px;
 	}
 	&__item {
 		&_1, &_4 {
@@ -810,7 +818,6 @@ i {
 //==============================
 .recommend {
 	padding: 10px 0 40px 0;
-	background: rgba(255, 255, 255, 1);
 	@media (min-width: 768px) {
 		&__container {
 			grid-auto-rows: 1fr;
@@ -823,192 +830,22 @@ i {
 	background: rgba(246, 246, 246, 1);
 	@media (min-width: 768px) {
 		&__container {
-			grid-auto-rows: 1fr;
 			overflow: visible;
-		}
-		&__wrapper {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-			grid-auto-rows: 1fr;
-			column-gap: 15px;
-			row-gap: 15px;
 		}
 		&__arrows {
 			display: none !important;
-		}
-	}
-}
-.item-new {
-	&__image {
-		position: relative;
-		padding: 0px 0px 90% 0px;
-		margin: 0px 0px 20px 0px;
-		img {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			object-fit: contain;
-		}
-	}
-	&__text {
-		font-weight: bold;
-		font-size: 12px;
-		line-height: 15px;
-		color: rgba(105, 105, 105, 1);
-		margin: 0 0 13px 0;
-	}
-	&__price {
-		font-family: Arial, sans-serif;
-		font-weight: bold;
-		font-size: 29px;
-		line-height: 33px;
-		color: rgba(41, 41, 41, 1);
-		margin: 0 0 19px 0;
-		span {
-			font-size: 26px;
-			font-weight: normal;
-		}
-	}
-	&__btn {
-		width: 90%;
-		height: 43px;
-		justify-self: center;
-		background: rgba(252, 25, 25, 1);
-		border-radius: 5px;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 24px;
-		color: rgba(255, 255, 255, 1);
-		padding: 10px;
-		cursor: pointer;
-		z-index: 2;
-	}
-	@media (min-width: 768px) {
-		&__btn {
-			&:hover {
-				background: rgba(211, 20, 20, 1);
-			}
 		}
 	}
 }
 //==============================
 .hits {
 	padding: 30px 0 50px 0;
-	background: rgba(255, 255, 255, 1);
-	display: grid;
-	grid-template: minmax(55px, auto) auto / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
-	position: relative;
-	&__title {
-		grid-column: 2 / 3;
-	}
-	&__container {
-		grid-column: 2 / 3;
-		width: 100%;
-	}
-	&__item {
-		background: rgba(255, 255, 255, 1);
-		border: 1px solid rgba(227, 227, 227, 1);
-		padding: 6px 30px 30px 30px;
-		display: grid;
-		grid-auto-flow: row;
-		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
-		text-align: center;
-		position: relative;
-		transition: border .3s ease;
-	}
 	@media (min-width: 768px) {
 		&__container {
-			grid-column: 2 / 3;
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-			grid-auto-rows: 1fr;
-			column-gap: 15px;
-			row-gap: 15px;
 			overflow: visible;
-		}
-		&__wrapper {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-			grid-auto-rows: 1fr;
-			column-gap: 15px;
-			row-gap: 15px;
-		}
-		&__item {
-			&:hover {
-				border: 1px solid rgba(255, 0, 0, 1);
-				.stock {
-					transition: opacity .2s ease, .2s, transform .4s ease 0s;
-					opacity: 1;
-					transform: translate(0, 0);
-					z-index: 1;
-				}
-			}
 		}
 		&__arrows {
 			display: none !important;
-		}
-	}
-}
-.item-hits {
-	&__image {
-		position: relative;
-		padding: 0px 0px 90% 0px;
-		margin: 0px 0px 20px 0px;
-		img {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			object-fit: contain;
-		}
-	}
-	&__text {
-		font-weight: bold;
-		font-size: 12px;
-		line-height: 15px;
-		color: rgba(105, 105, 105, 1);
-		margin: 0 0 13px 0;
-	}
-	&__price {
-		font-family: Arial, sans-serif;
-		font-weight: bold;
-		font-size: 29px;
-		line-height: 33px;
-		color: rgba(41, 41, 41, 1);
-		margin: 0 0 19px 0;
-		span {
-			font-size: 26px;
-			font-weight: normal;
-			&.old {
-				font-style: italic;
-				font-size: 18px;
-				line-height: 28px;
-				text-decoration-line: line-through;
-				color: rgba(189, 189, 189, 1);
-			}
-		}
-	}
-	&__btn {
-		width: 90%;
-		height: 43px;
-		background: rgba(252, 25, 25, 1);
-		border-radius: 5px;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 24px;
-		color: rgba(255, 255, 255, 1);
-		padding: 10px;
-		cursor: pointer;
-		z-index: 2;
-	}
-	@media (min-width: 768px) {
-		&__btn {
-			&:hover {
-				background: rgba(211, 20, 20, 1);
-			}
 		}
 	}
 }
@@ -1016,101 +853,6 @@ i {
 .discount {
 	padding: 10px 0 54px 0;
 	background: rgba(246, 246, 246, 1);
-	display: grid;
-	grid-template: minmax(55px, auto) auto / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
-	position: relative;
-	&__title {
-		grid-column: 2 / 3;
-	}
-	&__container {
-		grid-column: 2 / 3;
-		width: 100%;
-	}
-	&__item {
-		background: rgba(255, 255, 255, 1);
-		border: 1px solid rgba(227, 227, 227, 1);
-		padding: 16px 30px 30px 30px;
-		display: grid;
-		grid-auto-flow: row;
-		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
-		text-align: center;
-		position: relative;
-		transition: border .3s ease;
-	}
-	@media (min-width: 768px) {
-		&__container {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-			grid-auto-rows: 1fr;
-		}
-		&__item {
-			&:hover {
-				border: 1px solid rgba(255, 0, 0, 1);
-			}
-		}
-	}
-}
-.item-discount {
-	&__image {
-		position: relative;
-		padding: 0px 0px 90% 0px;
-		margin: 0px 0px 20px 0px;
-		img {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			object-fit: contain;
-		}
-	}
-	&__text {
-		font-weight: bold;
-		font-size: 12px;
-		line-height: 15px;
-		color: rgba(105, 105, 105, 1);
-		margin: 0 0 13px 0;
-	}
-	&__price {
-		font-family: Arial, sans-serif;
-		font-weight: bold;
-		font-size: 29px;
-		line-height: 33px;
-		color: rgba(41, 41, 41, 1);
-		margin: 0 0 19px 0;
-		span {
-			font-size: 26px;
-			font-weight: normal;
-			&.old {
-				font-style: italic;
-				font-size: 18px;
-				line-height: 28px;
-				text-decoration-line: line-through;
-				color: rgba(189, 189, 189, 1);
-			}
-		}
-	}
-	&__btn {
-		width: 90%;
-		height: 43px;
-		justify-self: center;
-		background: rgba(252, 25, 25, 1);
-		border-radius: 5px;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 24px;
-		color: rgba(255, 255, 255, 1);
-		padding: 10px;
-		cursor: pointer;
-		z-index: 2;
-	}
-	@media (min-width: 768px) {
-		&__btn {
-			&:hover {
-				background: rgba(211, 20, 20, 1);
-			}
-		}
-	}
 }
 //==============================
 .review {
@@ -1589,7 +1331,7 @@ i {
 	font-size: 12px;
 	font-weight: 600;
 	padding: 15px 5px 15px 5px;
-	background: #333333;
+	background: rgba(51, 51, 51, 1);
 	border-radius: 0px 0px 5px 5px;
 	opacity: 0;
 	z-index: -1;
