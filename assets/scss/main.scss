@@ -71,7 +71,7 @@ i {
 .icon-search1:before {
 	content: "\e902";
 }
-
+//==============================
 .product-s {
 	display: grid;
 	grid-template: minmax(55px, auto) auto / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
@@ -92,7 +92,6 @@ i {
 		grid-template: auto 1fr minmax(33px, auto) minmax(43px, auto) / 1fr;
 		text-align: center;
 		position: relative;
-		transition: border .3s ease;
 	}
 	@media (min-width: 768px) {
 		&__container {
@@ -108,19 +107,26 @@ i {
 			row-gap: 15px;
 		}
 		&__item {
+			transition: border .3s ease;
 			&:hover {
 				border: 1px solid rgba(255, 0, 0, 1);
 				.stock {
 					transition: opacity .2s ease, .2s, transform .4s ease 0s;
 					opacity: 1;
 					transform: translate(0, 0);
-					z-index: 1;
+					z-index: 2;
 				}
 			}
 		}
 	}
 }
 .item-product-s {
+	&__link {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+	}
 	&__image {
 		position: relative;
 		padding: 0px 0px 90% 0px;
@@ -172,6 +178,7 @@ i {
 		padding: 10px;
 		justify-self: center;
 		cursor: pointer;
+		transition: background .3s ease;
 		z-index: 2;
 	}
 	@media (min-width: 768px) {
@@ -204,15 +211,14 @@ i {
 	padding: 5px 0 5px 0;
 	grid-area: header;
 	display: grid;
-	grid-template: 58px / minmax(20px, 1fr) 40px minmax(142px, 1133px) minmax(20px, 1fr);
-	column-gap: 5px;
+	grid-template: 58px / minmax(20px, 1fr) 40px 20px minmax(142px, 1113px) minmax(20px, 1fr);
 	align-items: center;
 	&__top {
 		display: none;
 	}
 	&__main {
 		grid-row: 1 / 2;
-		grid-column: 3 / 4;
+		grid-column: 4 / 5;
 		display: grid;
 		grid-template: 1fr / 112px minmax(auto, 926px) 50px;
 		align-items: center;
@@ -242,6 +248,7 @@ i {
 			grid-template: 1fr / minmax(20px, 1fr) minmax(auto, 1173px) minmax(20px, 1fr);
 			align-items: center;
 			column-gap: 1px;
+			z-index: 7;
 		}
 		&__bottom {
 			grid-row: 2 / 3;
@@ -257,7 +264,7 @@ i {
 	top: 0;
 	left: 50%;
 	transform: translate(-50%, 0);
-	z-index: 3;
+	z-index: 5;
 	&__menu {
 		grid-column: 2 / 3;
 	}
@@ -461,7 +468,7 @@ i {
 		background-color: red;
 		position: relative;
 		cursor: pointer;
-		z-index: 4;
+		z-index: 6;
 		span {
 			background: rgba(255, 255, 255, 1);
 			position: absolute;
@@ -510,7 +517,7 @@ i {
 		left: 0;
 		transform: translate(-100%, 0);
 		transition: all .3s ease-out;
-		z-index: 2;
+		z-index: 5;
 		&.active {
 			transform: translate(0, 0);
 		}
@@ -561,6 +568,7 @@ i {
 			border: none;
 			padding: 0;
 			transform: translate(0, 0);
+			z-index: 2;
 		}
 		&__burger {
 			display: none;
@@ -1352,7 +1360,7 @@ i {
 	width: 100%;
 	display: grid;
 	grid-template: 36px / minmax(15px, 1fr) 36px minmax(auto, 1170px) 36px minmax(15px, 1fr);
-	z-index: 1;
+	z-index: 3;
 	@media (min-width: 768px) {
 		grid-template: 68px / minmax(15px, 1fr) 68px minmax(auto, 1170px) 68px minmax(15px, 1fr);
 	}
