@@ -32,7 +32,7 @@
 html,
 body {
 	height: 100%;
-	//background: rgba(255, 255, 255, 1);
+	background: rgba(255, 255, 255, 1);
 	font-family: "Open Sans", sans-serif;
 	color: rgba(34, 34, 34, 1);
 }
@@ -880,6 +880,20 @@ i {
 		grid-template: auto minmax(25px, auto) minmax(24px, auto) 1fr / 1fr;
 		margin: 0 0 15px 0;
 	}
+	@media (min-width: 768px) {
+		&__body {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-auto-rows: 1fr;
+			column-gap: 20px;
+			row-gap: 15px;
+		}
+		&__item {
+			margin: 0 0 0 0;
+		}
+	}
+}
+.item-review {
 	&__image {
 		position: relative;
 		padding: 0px 0px 40% 0px;
@@ -892,6 +906,9 @@ i {
 			left: 0;
 			object-fit: cover;
 		}
+	}
+	&__article {
+		color: rgba(79, 79, 79, 1);
 	}
 	&__mark {
 		color: rgba(255, 255, 255, 1);
@@ -908,6 +925,7 @@ i {
 		}
 	}
 	&__lable {
+		color: rgba(79, 79, 79, 1);
 		font-weight: bold;
 		font-size: 18px;
 		line-height: 24px;
@@ -917,26 +935,15 @@ i {
 		margin: 0;
 		font-size: 15px;
 		line-height: 24px;
-		color: rgba(79, 79, 79, 1);
 	}
 	@media (min-width: 768px) {
-		&__body {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-auto-rows: 1fr;
-			column-gap: 20px;
-			row-gap: 15px;
-		}
-		&__item {
-			margin: 0 0 0 0;
-			&:hover {
-				.review__lable {
-					color: rgba(252, 25, 25, 1);
-				}
-			}
-		}
 		&__lable {
 			margin: 14px 0 15px 0;
+		}
+		&:hover {
+			.item-review__lable {
+				color: rgba(252, 25, 25, 1);
+			}
 		}
 	}
 }
