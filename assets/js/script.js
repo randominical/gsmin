@@ -79,67 +79,51 @@ let discountSwiper = new Swiper ('.discount__container', {
     },
   },
 });
-/*проблема с resize*/
-let screenWidth = window.outerWidth;
 
-let newSlider = undefined;
-function initNewSwiper() {
-  if ( (screenWidth < (768)) && (newSlider == undefined)) {
-    newSlider = new Swiper('.new__container', {
-      direction: 'horizontal',
-      loop: true,
-      navigation: {
-        nextEl: '.new__arrow_n',
-        prevEl: '.new__arrow_p',
-      },
-      spaceBetween: 30,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        595: {
-            slidesPerView: 2,
-        },
-      },
-    });
-  } else if ((screenWidth > 767) && (newSlider != undefined)) {
-    newSlider.destroy();
-    newSlider = undefined;
-  }
-}
-initNewSwiper();
-
-window.addEventListener('resize', function(event){
-  initNewSwiper();
+let newSlider = new Swiper ('.new__container_mobile', {
+  direction: 'horizontal',
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.new__arrow_n',
+    prevEl: '.new__arrow_p',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    595: {
+        slidesPerView: 2,
+    },
+    880: {
+        slidesPerView: 3,
+    },
+    1165: {
+      slidesPerView: 4,
+    },
+  },
 });
 
-let hitsSlider = undefined;
-function initHitsSwiper() {
-  if ( (screenWidth < (768)) && (hitsSlider == undefined)) {
-    hitsSlider = new Swiper('.hits__container', {
-      direction: 'horizontal',
-      loop: true,
-      navigation: {
-        nextEl: '.hits__arrow_n',
-        prevEl: '.hits__arrow_p',
-      },
-      spaceBetween: 30,
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        595: {
-            slidesPerView: 2,
-        },
-      },
-    });
-  } else if ((screenWidth > 767) && (hitsSlider != undefined)) {
-    hitsSlider.destroy();
-    hitsSlider = undefined;
-  }
-}
-initHitsSwiper();
-
-window.addEventListener('resize', function(event){
-  initHitsSwiper();
+let hitsSlider = new Swiper ('.hits__container_mobile', {
+  direction: 'horizontal',
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.hits__arrow_n',
+    prevEl: '.hits__arrow_p',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    595: {
+        slidesPerView: 2,
+    },
+    880: {
+        slidesPerView: 3,
+    },
+    1165: {
+      slidesPerView: 4,
+    },
+  },
 });
