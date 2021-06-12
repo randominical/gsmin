@@ -1790,7 +1790,7 @@ i {
 
   .bottom-header__li:hover .sublist {
     display: block;
-    z-index: 3;
+    z-index: 4;
   }
 
   .bottom-header__link {
