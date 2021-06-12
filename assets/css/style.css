@@ -1123,7 +1123,7 @@ i {
   -ms-grid-rows: 36px;
   -ms-grid-columns: minmax(15px, 1fr) 36px minmax(auto, 1170px) 36px minmax(15px, 1fr);
       grid-template: 36px/minmax(15px, 1fr) 36px minmax(auto, 1170px) 36px minmax(15px, 1fr);
-  z-index: 3;
+  z-index: 1;
 }
 
 .swiper-arrow {
@@ -1790,7 +1790,7 @@ i {
 
   .bottom-header__li:hover .sublist {
     display: block;
-    z-index: 4;
+    z-index: 3;
   }
 
   .bottom-header__link {
