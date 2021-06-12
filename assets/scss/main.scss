@@ -851,7 +851,15 @@ i {
 				display: none;
 			}
 		}
-		&__arrows {
+		&__
+		
+		
+		
+		
+		
+		
+		
+		{
 			display: none !important;
 		}
 	}
@@ -1389,7 +1397,7 @@ i {
 	width: 100%;
 	display: grid;
 	grid-template: 36px / minmax(15px, 1fr) 36px minmax(auto, 1170px) 36px minmax(15px, 1fr);
-	z-index: 3;
+	z-index: 1;
 	@media (min-width: 768px) {
 		grid-template: 68px / minmax(15px, 1fr) 68px minmax(auto, 1170px) 68px minmax(15px, 1fr);
 	}
